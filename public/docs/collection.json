@@ -1,0 +1,1107 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "4296ccab-5dcc-4085-b604-aa92d9ce64d1",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/registration",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/registration",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/registration"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_type\":2,\"name\":\"Abdul Lotif\",\"phone\":\"+88 01234567890\",\"address\":\"Dhaka, Bangladesh.\",\"email\":\"lotif@mail.com\",\"username\":\"lotif\",\"password\":\"12345678\",\"confirm-password\":\"12345678\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"status\": true,\n\"message\": \"Registration successfully\",\n\"data\": {\n  \"name\": \"Abdul\",\n  \"username\": \"lotif\",\n  \"email\": \"lotif@mail.com\",\n  \"user_type\": 2,\n  \"is_admin\": 2,\n  \"approved\": 1,\n  \"updated_at\": \"2023-12-02T05:05:55.000000Z\",\n  \"created_at\": \"2023-12-02T05:05:55.000000Z\",\n  \"id\": 1,\n  \"token\": \"1|b4QdpNgFD7g6hSBTa4MoHBLXtjrKKtOW98Lev2d25754cfa6\"\n }\n}",
+                            "name": "Successfull Registration"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Registration Failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"username\":\"error\",\"password\":\"12345678\",\"email\":\"johndeo\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Login successfully\",\n     \"data\": {\n          \"id\": 16,\n          \"name\": \"Abdul\",\n          \"email\": \"lotif@mail.com\",\n          \"email_verified_at\": null,\n          \"is_admin\": 2,\n          \"approved\": 1,\n          \"photo\": null,\n          \"twitter\": null,\n          \"facebook\": null,\n          \"instagram\": null,\n          \"linkedin\": null,\n          \"created_at\": \"2023-12-02T05:05:55.000000Z\",\n          \"updated_at\": \"2023-12-02T05:05:55.000000Z\",\n          \"username\": \"lotif\",\n          \"user_type\": 2,\n          \"token\": \"1|hjv1wlu6K1w16jt8yaUxG70srKeUXDsgwQ7ho2q349dbf1e3\"\n      }\n  }",
+                            "name": "Successful Login"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Invalid credentials.\"\n}",
+                            "name": "Failed Login"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Logout successfully\",\n     \"data\": null\n  }",
+                            "name": "Successful Login"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Failed Logout"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/services",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/services",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/services"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"status\": true,\n\"message\": \"Request Successfull\",\n\"data\": [\n     {\n         \"id\": 1,\n         \"name\": \"Airport Shuttle Service\",\n         \"status\": 1,\n         \"auto_approved\": 0,\n         \"description\": \"\",\n         \"service_type_id\": null,\n         \"created_at\": \"2023-12-02T05:05:42.000000Z\",\n         \"updated_at\": \"2023-12-02T05:05:42.000000Z\"\n     }\n ]\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/settings",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/settings",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/settings"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n       \"status\": true,\n       \"message\": \"Request Successfull\",\n       \"data\": {\n           \"id\": 1,\n           \"business_name\": \"Your Business Name\",\n           \"business_address\": \"your business address\",\n           \"business_number\": \"00000000000\",\n           \"business_email\": null,\n           \"time_zone\": null,\n           \"logo\": null,\n           \"favicon\": null,\n           \"meta_title\": null,\n           \"meta_description\": null,\n           \"meta_image\": null,\n           \"mail_host\": null,\n           \"mail_port\": null,\n           \"mail_username\": null,\n           \"mail_password\": null,\n           \"mail_from_name\": null,\n           \"mail_from_address\": null,\n           \"mail_encryption\": null,\n           \"mail_status\": null,\n           \"stripe_payment\": null,\n           \"stripe_key\": null,\n           \"stripe_secret\": null,\n           \"created_at\": \"2023-12-02T05:05:42.000000Z\",\n           \"updated_at\": \"2023-12-02T05:05:42.000000Z\"\n       }\n   }",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/tickets",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Request Successfull\",\n      \"data\": {\n          \"current_page\": 1,\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"user_id\": 16,\n                  \"name\": \"Abdul\",\n                  \"email\": \"lotif@mail.com\",\n                  \"ticket\": \"640788\",\n                  \"subject\": \"Booking Problem\",\n                  \"status\": 0,\n                  \"priority\": 3,\n                  \"last_reply\": \"2023-12-02 10:15:18\",\n                  \"created_at\": \"2023-12-02T10:15:18.000000Z\",\n                  \"updated_at\": \"2023-12-02T10:15:18.000000Z\"\n              }\n          ],\n          \"first_page_url\": \"http:\/\/127.0.0.1:8000\/api\/tickets?page=1\",\n          \"from\": 1,\n          \"last_page\": 1,\n          \"last_page_url\": \"http:\/\/127.0.0.1:8000\/api\/tickets?page=1\",\n          \"links\": [\n              {\n                  \"url\": null,\n                  \"label\": \"&laquo; Previous\",\n                  \"active\": false\n              },\n              {\n                  \"url\": \"http:\/\/127.0.0.1:8000\/api\/tickets?page=1\",\n                  \"label\": \"1\",\n                  \"active\": true\n              },\n              {\n                  \"url\": null,\n                  \"label\": \"Next &raquo;\",\n                  \"active\": false\n              }\n          ],\n          \"next_page_url\": null,\n          \"path\": \"http:\/\/127.0.0.1:8000\/api\/tickets\",\n          \"per_page\": 20,\n          \"prev_page_url\": null,\n          \"to\": 1,\n          \"total\": 1\n      }\n  }",
+                            "name": "Request Successful"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/transport-type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/transport-type",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/transport-type"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"status\": true,\n\"message\": \"Request Successfull\",\n\"data\": [\n     {\n         \"id\": 1,\n         \"name\": \"Airport Shuttle Service\",\n         \"status\": 1,\n         \"auto_approved\": 0,\n         \"description\": \"\",\n         \"service_type_id\": null,\n         \"created_at\": \"2023-12-02T05:05:42.000000Z\",\n         \"updated_at\": \"2023-12-02T05:05:42.000000Z\"\n     }\n ]\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/user-password-update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-password-update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-password-update"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"password\":\"12345678\",\"confirm-password\":\"12345678\",\"old_password\":\"123456\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Password changed successfully\",\n     \"data\": null\n  }",
+                            "name": "Successful Password Update"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Incorrect old password.\"\n}",
+                            "name": "Failed Password Update"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/user-profile-update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-profile-update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-profile-update"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "lotif@mail.com",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "John Doe",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "+88 01234567890",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "Dhaka, Bangladesh.",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "license_number",
+                                    "value": "35342534",
+                                    "type": "text",
+                                    "description": "optional Only for driver"
+                                },
+                                {
+                                    "key": "nid_number",
+                                    "value": "35342534",
+                                    "type": "text",
+                                    "description": "optional"
+                                },
+                                {
+                                    "key": "preferred_areas",
+                                    "value": "35342534",
+                                    "type": "text",
+                                    "description": "optional Only for driver"
+                                },
+                                {
+                                    "key": "passport_number",
+                                    "value": "35342534",
+                                    "type": "text",
+                                    "description": "optional"
+                                },
+                                {
+                                    "key": "twitter",
+                                    "value": "https:\/\/example.com",
+                                    "type": "text",
+                                    "description": "optional"
+                                },
+                                {
+                                    "key": "facebook",
+                                    "value": "https:\/\/example.com",
+                                    "type": "text",
+                                    "description": "optional"
+                                },
+                                {
+                                    "key": "instagram",
+                                    "value": "https:\/\/example.com",
+                                    "type": "text",
+                                    "description": "optional"
+                                },
+                                {
+                                    "key": "linkedin",
+                                    "value": "https:\/\/example.com",
+                                    "type": "text",
+                                    "description": "optional"
+                                },
+                                {
+                                    "key": "passport_photo",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "license_photo",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "nid_photo",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "documents",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "photo",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Profile updated successfully\",\n      \"data\": {\n          \"id\": 16,\n          \"name\": \"Abdul Hamid Khan Vashani\",\n          \"email\": \"vahsani@gmail.com\",\n          \"email_verified_at\": null,\n          \"is_admin\": 2,\n          \"approved\": 1,\n          \"photo\": null,\n          \"twitter\": \"optional\",\n          \"facebook\": \"optional\",\n          \"instagram\": \"optional\",\n          \"linkedin\": \"optional\",\n          \"created_at\": \"2023-12-02T05:05:55.000000Z\",\n          \"updated_at\": \"2023-12-03T06:35:55.000000Z\",\n          \"username\": \"lotif\",\n          \"user_type\": 2\n      }\n  }",
+                            "name": "Request Successfull"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/customer\/create-booking",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/create-booking",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/create-booking"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"start_location\":\"New York\",\"end_location\":\"Chicago\",\"service_id\":1,\"driver_id\":2,\"customer_id\":2,\"pickup_time\":\"12:30:33\",\"from_date\":\"2023-12-01\",\"to_date\":\"2023-12-02\",\"payment_method\":\"Bank Account\",\"total_km\":\"450.50 Km\",\"base_fare\":\"30.00\",\"final_total\":\"13500.00\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Data created successfully\",\n      \"data\": {\n          \"start_location\": \"bogura\",\n          \"end_location\": \"dhaka\",\n          \"service_id\": \"1\",\n          \"driver_id\": \"1\",\n          \"pickup_time\": \"12:30:00\",\n          \"from_date\": \"2023-12-01\",\n          \"to_date\": \"2023-12-01\",\n          \"payment_method\": \"cash\",\n          \"total_km\": \"100\",\n          \"final_total\": 5000,\n          \"customer_id\": \"1\",\n          \"status\": 0,\n          \"order_id\": \"INV -20231204043028\",\n          \"created_by\": \"1\",\n          \"updated_at\": \"2023-12-04T04:30:28.000000Z\",\n          \"created_at\": \"2023-12-04T04:30:28.000000Z\",\n          \"id\": 1\n      }\n  }",
+                            "name": "Request Successfull"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Requested service is not available.\"\n}",
+                            "name": "Service Unavailable"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/customer\/payment-list",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/payment-list",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/payment-list"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Data retrived successfully\",\n      \"data\": [\n          {\n              \"id\": 4,\n              \"booking_id\": 1,\n              \"total_amount\": \"5580.00\",\n              \"discount_amount\": \"0.00\",\n              \"paid_amount\": \"5580.00\",\n              \"payment_method\": \"card\",\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n              \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n          }\n      ]\n  }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/customer\/all-bookings",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/all-bookings",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/all-bookings"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/customer\/completed-trip",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/completed-trip",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/completed-trip"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"status\": true,\n  \"message\": \"Data retrived successfully\",\n  \"data\": [\n      {\n          \"id\": 1,\n          \"customer_id\": 3,\n          \"driver_id\": 6,\n          \"service_id\": 1,\n          \"pickup_time\": \"02:00\",\n          \"start_location\": \"Bogura\",\n          \"end_location\": \"Dhaka\",\n          \"from_date\": \"2023-12-03\",\n          \"to_date\": \"2023-12-03\",\n          \"base_fare\": \"30.00\",\n          \"total_km\": \"186.96\",\n          \"coupon_code\": null,\n          \"coupon_amount\": null,\n          \"discount\": null,\n          \"tax\": null,\n          \"final_total\": \"5580\",\n          \"note\": null,\n          \"payment_method\": \"Credit Debit  Card\",\n          \"created_by\": \"3\",\n          \"is_round_trip\": null,\n          \"transportation_mode\": null,\n          \"passenger\": \"4\",\n          \"order_id\": \"INV -20231203100006\",\n          \"status\": 2,\n          \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"customer\": {\n              \"id\": 3,\n              \"name\": \"Sven69\",\n              \"email\": \"fakedata90875@gmail.com\",\n              \"phone\": \"78987\",\n              \"address\": \"8786 Altenwerth Trace\",\n              \"profile_photo\": null,\n              \"nid_number\": null,\n              \"passport_number\": null,\n              \"passport_photo\": null,\n              \"user_id\": 16,\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n              \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n          },\n          \"driver\": {\n              \"id\": 6,\n              \"name\": \"Donnie\",\n              \"phone\": \"1933374304\",\n              \"address\": null,\n              \"license_number\": null,\n              \"user_id\": 9,\n              \"service_id\": 1,\n              \"license_photo\": null,\n              \"nid_photo\": null,\n              \"passport_photo\": null,\n              \"documents\": null,\n              \"preferred_areas\": null,\n              \"status\": 0,\n              \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n              \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n          },\n          \"customer_review\": [],\n          \"payment\": [\n              {\n                  \"id\": 4,\n                  \"booking_id\": 1,\n                  \"total_amount\": \"5580.00\",\n                  \"discount_amount\": \"0.00\",\n                  \"paid_amount\": \"5580.00\",\n                  \"payment_method\": \"card\",\n                  \"status\": 1,\n                  \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n              }\n          ],\n          \"driver_review\": [],\n          \"service\": {\n              \"id\": 1,\n              \"name\": \"Airport Shuttle Service\",\n              \"status\": 1,\n              \"auto_approved\": 1,\n              \"description\": null,\n              \"service_type_id\": null,\n              \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n              \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n          }\n      }\n  ]\n}\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/customer\/pending-trip",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/pending-trip",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/pending-trip"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"status\": true,\n  \"message\": \"Data retrived successfully\",\n  \"data\": [\n      {\n          \"id\": 1,\n          \"customer_id\": 3,\n          \"driver_id\": 6,\n          \"service_id\": 1,\n          \"pickup_time\": \"02:00\",\n          \"start_location\": \"Bogura\",\n          \"end_location\": \"Dhaka\",\n          \"from_date\": \"2023-12-03\",\n          \"to_date\": \"2023-12-03\",\n          \"base_fare\": \"30.00\",\n          \"total_km\": \"186.96\",\n          \"coupon_code\": null,\n          \"coupon_amount\": null,\n          \"discount\": null,\n          \"tax\": null,\n          \"final_total\": \"5580\",\n          \"note\": null,\n          \"payment_method\": \"Credit Debit  Card\",\n          \"created_by\": \"3\",\n          \"is_round_trip\": null,\n          \"transportation_mode\": null,\n          \"passenger\": \"4\",\n          \"order_id\": \"INV -20231203100006\",\n          \"status\": 2,\n          \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"customer\": {\n              \"id\": 3,\n              \"name\": \"Sven69\",\n              \"email\": \"fakedata90875@gmail.com\",\n              \"phone\": \"78987\",\n              \"address\": \"8786 Altenwerth Trace\",\n              \"profile_photo\": null,\n              \"nid_number\": null,\n              \"passport_number\": null,\n              \"passport_photo\": null,\n              \"user_id\": 16,\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n              \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n          },\n          \"driver\": {\n              \"id\": 6,\n              \"name\": \"Donnie\",\n              \"phone\": \"1933374304\",\n              \"address\": null,\n              \"license_number\": null,\n              \"user_id\": 9,\n              \"service_id\": 1,\n              \"license_photo\": null,\n              \"nid_photo\": null,\n              \"passport_photo\": null,\n              \"documents\": null,\n              \"preferred_areas\": null,\n              \"status\": 0,\n              \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n              \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n          },\n          \"customer_review\": [],\n          \"payment\": [\n              {\n                  \"id\": 4,\n                  \"booking_id\": 1,\n                  \"total_amount\": \"5580.00\",\n                  \"discount_amount\": \"0.00\",\n                  \"paid_amount\": \"5580.00\",\n                  \"payment_method\": \"card\",\n                  \"status\": 1,\n                  \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n              }\n          ],\n          \"driver_review\": [],\n          \"service\": {\n              \"id\": 1,\n              \"name\": \"Airport Shuttle Service\",\n              \"status\": 1,\n              \"auto_approved\": 1,\n              \"description\": null,\n              \"service_type_id\": null,\n              \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n              \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n          }\n      }\n  ]\n}\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/customer\/cancelled-trip",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/cancelled-trip",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/cancelled-trip"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"status\": true,\n  \"message\": \"Data retrived successfully\",\n  \"data\": [\n      {\n          \"id\": 1,\n          \"customer_id\": 3,\n          \"driver_id\": 6,\n          \"service_id\": 1,\n          \"pickup_time\": \"02:00\",\n          \"start_location\": \"Bogura\",\n          \"end_location\": \"Dhaka\",\n          \"from_date\": \"2023-12-03\",\n          \"to_date\": \"2023-12-03\",\n          \"base_fare\": \"30.00\",\n          \"total_km\": \"186.96\",\n          \"coupon_code\": null,\n          \"coupon_amount\": null,\n          \"discount\": null,\n          \"tax\": null,\n          \"final_total\": \"5580\",\n          \"note\": null,\n          \"payment_method\": \"Credit Debit  Card\",\n          \"created_by\": \"3\",\n          \"is_round_trip\": null,\n          \"transportation_mode\": null,\n          \"passenger\": \"4\",\n          \"order_id\": \"INV -20231203100006\",\n          \"status\": 2,\n          \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"customer\": {\n              \"id\": 3,\n              \"name\": \"Sven69\",\n              \"email\": \"fakedata90875@gmail.com\",\n              \"phone\": \"78987\",\n              \"address\": \"8786 Altenwerth Trace\",\n              \"profile_photo\": null,\n              \"nid_number\": null,\n              \"passport_number\": null,\n              \"passport_photo\": null,\n              \"user_id\": 16,\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n              \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n          },\n          \"driver\": {\n              \"id\": 6,\n              \"name\": \"Donnie\",\n              \"phone\": \"1933374304\",\n              \"address\": null,\n              \"license_number\": null,\n              \"user_id\": 9,\n              \"service_id\": 1,\n              \"license_photo\": null,\n              \"nid_photo\": null,\n              \"passport_photo\": null,\n              \"documents\": null,\n              \"preferred_areas\": null,\n              \"status\": 0,\n              \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n              \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n          },\n          \"customer_review\": [],\n          \"payment\": [\n              {\n                  \"id\": 4,\n                  \"booking_id\": 1,\n                  \"total_amount\": \"5580.00\",\n                  \"discount_amount\": \"0.00\",\n                  \"paid_amount\": \"5580.00\",\n                  \"payment_method\": \"card\",\n                  \"status\": 1,\n                  \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n              }\n          ],\n          \"driver_review\": [],\n          \"service\": {\n              \"id\": 1,\n              \"name\": \"Airport Shuttle Service\",\n              \"status\": 1,\n              \"auto_approved\": 1,\n              \"description\": null,\n              \"service_type_id\": null,\n              \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n              \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n          }\n      }\n  ]\n}\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/customer\/user-profile",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/customer\/user-profile",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/customer\/user-profile"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Data retrive successfully\",\n      \"data\": {\n          \"id\": 3,\n          \"name\": \"Sven69\",\n          \"email\": \"fakedata90875@gmail.com\",\n          \"phone\": \"78987\",\n          \"address\": \"8786 Altenwerth Trace\",\n          \"profile_photo\": null,\n          \"nid_number\": null,\n          \"passport_number\": null,\n          \"passport_photo\": null,\n          \"user_id\": 16,\n          \"status\": 1,\n          \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n          \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n      }\n  }",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/tickets\/create",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"subject\":\"Booking Problem\",\"priority\":1,\"message\":\"I have a problem with booking a taxi.\",\"attachments\":[\"sit\"]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Ticket opened successfully.\",\n      \"data\": null\n  }",
+                            "name": "Request Successful"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error occured.\"\n}",
+                            "name": "Failed Login"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/tickets\/ticket-message-reply\/{ticket_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/ticket-message-reply\/:ticket_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/ticket-message-reply\/:ticket_id",
+                            "variable": [
+                                {
+                                    "id": "ticket_id",
+                                    "key": "ticket_id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"message\":\"Booking Problem message reply\",\"attachments\":[\"sint\"]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Message Sent.\",\n      \"data\": null\n  }",
+                            "name": "Request Successful"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error occured.\"\n}",
+                            "name": "Request Failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/tickets\/ticket-close\/{ticket_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/ticket-close\/:ticket_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/ticket-close\/:ticket_id",
+                            "variable": [
+                                {
+                                    "id": "ticket_id",
+                                    "key": "ticket_id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Ticket Closed successfully\",\n      \"data\": {\n          \"id\": 1,\n          \"user_id\": 16,\n          \"name\": \"Abdul\",\n          \"email\": \"lotif@mail.com\",\n          \"ticket\": \"640788\",\n          \"subject\": \"Booking Problem\",\n          \"status\": 3,\n          \"priority\": 3,\n          \"last_reply\": \"2023-12-03 07:07:49\",\n          \"created_at\": \"2023-12-02T10:15:18.000000Z\",\n          \"updated_at\": \"2023-12-03T07:16:36.000000Z\"\n      }\n  }",
+                            "name": "Request Successful"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error occured.\"\n}",
+                            "name": "Request Failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/driver\/all-booking-list-view",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/driver\/all-booking-list-view",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/driver\/all-booking-list-view"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/driver\/completed-trip",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/driver\/completed-trip",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/driver\/completed-trip"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/driver\/pending-trip",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/driver\/pending-trip",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/driver\/pending-trip"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/driver\/cancelled-trip",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/driver\/cancelled-trip",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/driver\/cancelled-trip"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/driver\/user-profile",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/driver\/user-profile",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/driver\/user-profile"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Data retrive successfully\",\n      \"data\": {\n          \"id\": 3,\n          \"name\": \"Sven69\",\n          \"email\": \"fakedata90875@gmail.com\",\n          \"phone\": \"78987\",\n          \"address\": \"8786 Altenwerth Trace\",\n          \"profile_photo\": null,\n          \"nid_number\": null,\n          \"passport_number\": null,\n          \"passport_photo\": null,\n          \"user_id\": 16,\n          \"status\": 1,\n          \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n          \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n      }\n  }",
+                            "name": "Request Successfull"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/driver\/update-veicle-information",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/driver\/update-veicle-information",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/driver\/update-veicle-information"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"driver_id\":1,\"transport_type_id\":5,\"name\":\"Audi 8\",\"register_no\":\"BD96587\",\"engine_no\":\"GH8965874\",\"license_number\":\"35342534\",\"chasis_no\":\"35342534\",\"model_no\":\"35342534\",\"seat_capacity\":\"1,2,3\",\"car_planumber\":\"1236\",\"operating_license\":\"585269\",\"car_luggage\":5,\"car_photos\":\"['image_1', 'image_2']\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n      \"status\": true,\n      \"message\": \"Information updated successfully\",\n      \"data\": null\n  }",
+                            "name": "Request Successfull"
+                        },
+                        {
+                            "header": [],
+                            "code": 417,
+                            "body": "{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}",
+                            "name": "Request Failed"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

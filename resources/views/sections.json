@@ -1,0 +1,75 @@
+{
+    "top_body": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Top Body",
+        "content": {
+            "title": "text",
+            "short_details": "text"
+        }
+    },
+    "top_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Top Icon",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "service": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Service",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "travel": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Travel",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "latest_news": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Latest News",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "rental_vehicle": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Rental Vehicle",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "key_feature": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Key Feature",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "blog": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Blog",
+        "content": {
+            "content": "editor"
+        }
+    },
+    "newsletter": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Newsletter",
+        "content": {
+            "title": "text"
+        }
+    }
+}

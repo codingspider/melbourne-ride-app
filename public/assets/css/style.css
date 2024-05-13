@@ -1,0 +1,2964 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #ffc107;
+}
+
+
+/*--================================header section start here=======================--*/
+
+.header {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+    background-color: white;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+}
+
+
+/*--================================header section end here=======================--*/
+
+
+/*--================================top-body section start here=======================--*/
+
+.top-body {
+    background-image: url(images/wp11403307.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    margin-top: 60px;
+}
+
+
+/*---top-body-right-side--*/
+
+.top_viewed_nav {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bg-white .owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    right: -20px;
+    top: -65px;
+}
+
+.bg-white .owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    left: -20px;
+    top: -65px;
+}
+
+#myTab .b_link.active {
+    border-color: transparent;
+    background-color: #fff !important;
+    color: #ffc107 !important;
+    border-bottom: 4px solid #ffc107 !important;
+}
+
+#myTab {
+    padding: 0 20px;
+}
+
+#myTab i {
+    margin-right: 6px;
+}
+
+#myTab li span,
+i {
+    font-size: 14px;
+}
+
+.nav-fill .b_item .b_link,
+.nav-justified .b_item .b_link {
+    width: 100%;
+    color: #000;
+}
+
+#myTab .b_link {
+    border-top-left-radius: 0rem !important;
+    border-top-right-radius: 0rem !important;
+}
+
+#myTab .b_link.active {
+    border-color: transparent;
+    background-color: #60D0FF;
+    color: #fff;
+    font-weight: 600;
+}
+
+.b_link {
+    height: 77px;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+.b_link:hover {
+    border: none;
+}
+
+.b_link:focus {
+    outline: none;
+}
+
+.form-control {
+    height: 45px;
+    position: relative;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #9a1550;
+}
+
+.flight-where-from:after {
+    position: absolute;
+    content: '23';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.custom-button {
+    height: 45px;
+    background-color: #9a1550;
+    border: none;
+    color: #fff;
+}
+
+.custom-button:hover,
+.custom-button:focus {
+    background-color: #9a1550;
+    box-shadow: none;
+    outline: none;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+    height: 300px;
+}
+
+
+/*----new form----*/
+
+.booking-form {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 20px 25px 25px;
+}
+
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+    background-color: #fff;
+    color: #191a1e;
+    border: 2px solid #dfe5e9;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+    color: #dfe5e9;
+}
+
+.booking-form .form-control::placeholder {
+    color: #dfe5e9;
+}
+
+.booking-form .form-control:focus {
+    background: #f9fafb;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+    color: #dfe5e9;
+}
+
+.booking-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 32px;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+    pointer-events: none;
+    color: #dfe5e9;
+    font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+    content: '\279C';
+    display: block;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ffc107;
+}
+
+.booking-form .form-checkbox input {
+    position: absolute !important;
+    margin-left: -9999px !important;
+    visibility: hidden !important;
+}
+
+.booking-form .form-checkbox label {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 700;
+    color: #191a1e;
+}
+
+.booking-form .form-checkbox label+label {
+    margin-left: 15px;
+}
+
+.booking-form .form-checkbox input+span {
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #dfe5e9;
+    border-radius: 50%;
+}
+
+.booking-form .form-checkbox input+span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: #ffc107;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+    opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked+span:after {
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.booking-form .submit-btn {
+    color: #fff;
+    background-color: var(--primary-color);
+    font-weight: 400;
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+.booking-cta {
+    margin-top: 45px;
+}
+
+.booking-cta h1 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.booking-cta p {
+    font-size: 22px;
+}
+
+
+/*-----new form---*/
+
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 35px;
+    text-align: center;
+}
+
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background: #ffc107 !important;
+}
+
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background: #ffc107 !important;
+}
+
+.guides_res .carousel-control-prev {
+    height: unset;
+    background: 0 0 !important;
+    width: unset;
+    top: 5px !important;
+    padding: 55px;
+}
+
+.minus:hover {
+    background-color: #717fe0 !important;
+}
+
+.plus:hover {
+    background-color: #717fe0 !important;
+}
+
+span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input {
+    border: 0;
+    width: 2%;
+}
+
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:disabled {
+    background-color: white;
+}
+
+.bookcheck input {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.bookcheck label {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+/*---top-body-left-side---*/
+
+.h_cars {
+    display: flex;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .h_cars {
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        white-space: nowrap;
+    }
+    .footer a:not(.btn-theme) {
+        color: #FFFFFF;
+    }
+}
+
+.h_cars_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #fff !important;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.h_cars_link:hover {
+    background: #ffc107;
+    border-color: #ffc107;
+}
+
+.h_cars_link:hover img {
+    filter: contrast(300%) invert(100%);
+}
+
+.h_cars_link_img {
+    height: 45px;
+}
+
+.h_cars_link_img img {
+    filter: contrast(300%) invert(100%);
+    width: 45px;
+    height: auto;
+}
+
+.h_cars_label {
+    margin-top: 5px;
+    transition: .3s ease-in-out;
+}
+
+.h_cars_label {
+    text-align: center;
+}
+
+.h_cars {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.h_cars_link_img {
+    display: flex;
+    align-items: flex-end;
+    height: 35px;
+}
+
+
+/*--================================top-body section end here=======================--*/
+
+
+/*--================================Our_Services section start here=======================--*/
+
+.Our_Services a img:hover {
+    border-radius: 50%;
+}
+
+.button a {
+    font-size: 20px;
+    background: var(--primary-color);
+    ;
+}
+
+.button a:hover {
+    background: var(--primary-color);
+    ;
+}
+
+.Our_Services p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+
+/*--================================Our_Services section end here=======================--*/
+
+
+/*--================================travel section start here=======================--*/
+
+.easy h6 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #262858;
+}
+
+.easy p {
+    text-align: left;
+}
+
+.easy i {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.travel h1 {
+    color: #262858;
+    text-align: left;
+    font-size: 65px;
+}
+
+.travel p {
+    text-align: left;
+}
+
+.travel hr {
+    width: 100px;
+    color: var(--primary-color);
+    border-bottom: 5px solid red;
+}
+
+.buttonn {
+    text-align: left;
+}
+
+
+/*--================================travel section end here=======================--*/
+
+
+/*--================================the latest news  section start here=======================--*/
+
+.the_latest_news {
+    padding: 150px 0;
+    text-align: left;
+}
+
+.luxx h2 {
+    color: #262858;
+    font-size: 45px;
+    line-height: 55px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.luxbtn {
+    text-align: left;
+    display: block;
+}
+
+.luxbtn i {
+    margin-left: 10px;
+}
+
+
+/*--================================ the latest news section end here=======================--*/
+
+
+/*--================================Top Rental vehicles section start here=======================--*/
+
+.tim_km i {
+    margin-right: 6px;
+}
+
+.text_con p {
+    text-align: center;
+}
+
+div {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bbb_viewed {
+    padding-top: 51px;
+    padding-bottom: 60px;
+}
+
+.bbb_main_container {
+    background-color: #fff;
+    padding: 11px;
+}
+
+.bbb_viewed_title_container {
+    border-bottom: solid 1px #dadada;
+}
+
+.Top_rental_vehicles h2 {
+    margin-bottom: 20px;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+.bbb_viewed_nav_container {
+    position: absolute;
+    right: -5px;
+    bottom: 14px;
+}
+
+.bbb_viewed_nav {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bbb_viewed_nav i {
+    color: #dadada;
+    font-size: 18px;
+    padding: 5px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.bbb_viewed_nav:hover i {
+    color: #606264;
+}
+
+.bbb_viewed_prev {
+    margin-right: 15px;
+}
+
+.bbb_viewed_slider_container {
+    padding-top: 13px;
+}
+
+.bbb_viewed_item {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.bbb_viewed_image img {
+    display: block;
+    max-width: 100%
+}
+
+.pbt {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bbb_viewed_content {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+}
+
+.bbb_viewed_price {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.bbb_viewed_item.discount .bbb_viewed_price {
+    color: #df3b3b;
+}
+
+.bbb_viewed_price span {
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 8px;
+}
+
+.text_con p {
+    color: #df3b3b;
+    font-weight: 500;
+}
+
+.bbb_viewed_price span::after {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 1px;
+    background: #8d8d8d;
+    content: ''
+}
+
+.bbb_viewed_name {
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+.item_marks {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+}
+
+.item_mark {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+}
+
+.item_discount {
+    background: #df3b3b;
+    margin-right: 5px;
+}
+
+.item_new {
+    background: #0e8ce4;
+}
+
+.bbb_viewed_item.discount .item_discount {
+    display: inline-block;
+}
+
+.bbb_viewed_item.is_new .item_new {
+    display: inline-block;
+}
+
+
+/*--================================Top Rental vehicles section end here=======================--*/
+
+
+/*--================================blog vehicles section start here=======================--*/
+
+.blog {
+    padding: 40px 0;
+}
+
+.blog img {
+    width: 450px;
+    border-radius: 0.8rem;
+}
+
+.blog h2 {
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.blog p {
+    color: #5C4D44;
+}
+
+.fsimg {
+    text-align: left !important;
+}
+
+.lsimg {
+    text-align: right !important;
+}
+
+
+/*--================================blog vehicles section end here=======================--*/
+
+
+/*--================================blog gallery section end here=======================--*/
+
+.blog_gallery img {
+    max-width: 100%;
+    height: 250px;
+    width: 100%;
+}
+
+.gallery-wrap,
+#gallery {
+    overflow: hidden;
+}
+
+#filters {
+    margin: 1%;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+#filters li {
+    float: left;
+}
+
+#filters li span {
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.25s;
+}
+
+#filters li:hover span {
+    color: #000;
+}
+
+#filters li span.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.gallery-item {
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+
+.details,
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.overlay {
+    background: rgba(255, 204, 0, 0.5);
+    z-index: 1;
+    transition: all 0.7s ease-in-out;
+}
+
+.gallery-item h6 {
+    text-align: right !important;
+    color: var(--primary-color);
+}
+
+.gallery-item:hover .details,
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+@media (max-width: 30em) {
+    .wrap {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .gallery-item {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+/*--================================blog gallery section end here=======================--*/
+
+
+/*--================================KEY_FEATURES vehicles section start here=======================--*/
+
+.KEY_FEATURES {
+    padding: 60px 0;
+}
+
+.KEY_FEATURES h5 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.KEY_FEATURES h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.KEY_FEATURES i {
+    font-size: 45px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.KEY_FEATURES h6 {
+    text-align: center;
+    color: #2C3E50;
+    font-weight: 700;
+    font-family: 'Lato';
+    font-size: 1.67em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.KEY_FEATURES p {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+
+/*--================================KEY_FEATURES vehicles section end here=======================--*/
+
+
+/*--================================newsletter section start here=======================--*/
+
+.newsletter .subs {
+    background-color: var(--primary-color);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.subs h2,
+h5,
+p {
+    text-align: left;
+}
+
+.subs h2 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.subs h5 {
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.newsletter {
+    margin-bottom: -50px;
+}
+
+
+/*--================================newsletter section end here=======================--*/
+
+
+/*--================================contact_us section end here=======================--*/
+
+.contact_us {
+    background-image: url(images/slider-mainbg-001.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 150px 0;
+    margin-top: 70px;
+}
+
+.contact_us h2 {
+    color: #fff;
+    font-size: 65px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.contact_us p {
+    color: #fff;
+    width: 40%;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form_support {}
+
+.form_support .submit-btn {
+    color: #fff;
+    background-color: var(--primary-color);
+    font-weight: 400;
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+.form_support .form-group {
+    text-align: left !important;
+    margin-top: 20px;
+    color: #262858;
+}
+
+.form_support .form-group textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.form_support h6 {
+    color: #262858;
+    text-align: center;
+    font-size: 20px;
+}
+
+.accordion-item h2 button {
+    color: #262858;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #F6F6F7;
+}
+
+
+/*--================================contact_us section end here=======================--*/
+
+
+/*--================================map section end here=======================--*/
+
+.map {
+    padding: 60px 0;
+}
+
+.maps iframe {
+    border-radius: 20px;
+}
+
+
+/*--================================map section end here=======================--*/
+
+
+/*--================================blog_part section start here=======================--*/
+
+.blog_part {
+    background-image: url(images/cta_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 150px 0;
+    margin-top: 70px;
+}
+
+.blog_part h1 {
+    color: #fff;
+    font-size: 65px;
+    text-align: center;
+}
+
+
+/*--================================blog_part section end here=======================--*/
+
+
+/*--================================guides section start here=======================--*/
+
+.heading p {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.guides h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.guides img {
+    border-radius: 20px;
+}
+
+.latest_news_one img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.latest_news_three img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.latest_news_two img {
+    width: 200px;
+    height: 130px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.news_text p {
+    text-align: left !important;
+}
+
+.guides h4 {
+    font-size: 20px;
+}
+
+.guides a {
+    font-size: 15px;
+}
+
+
+/*--================================guides section end here=======================--*/
+
+
+/*--================================services section start here=======================--*/
+
+.our_services {
+    padding-bottom: 4.7rem;
+    padding-top: 8.7rem;
+    background: linear-gradient(180deg, rgba(255, 222, 199, 0) 25.44%, rgba(255, 222, 199, 0.5) 100%);
+    margin-top: 60px;
+}
+
+.our_services h1 {
+    text-align: left;
+    color: var(--primary-color);
+    font-size: 55px;
+}
+
+.service_img img {
+    width: 100%;
+}
+
+
+/*--================================services section end here=======================--*/
+
+
+/*--================================category services section start here=======================--*/
+
+.category_services h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #262858;
+    margin-bottom: 80px;
+}
+
+.category_services {
+    padding-top: 60px;
+}
+
+.category_services span {
+    color: var(--primary-color);
+}
+
+.icon-service i {
+    font-size: 60px;
+    border: 4px solid #FFEEE3;
+    border-radius: 50%;
+    padding: 15px 20px;
+}
+
+.icon-service h4 {
+    margin-top: 30px;
+    text-align: center;
+    color: #262858;
+}
+
+.icon-service p {
+    text-align: center;
+}
+
+.array:hover i {
+    color: #000;
+}
+
+
+/*--================================category services section end here=======================--*/
+
+
+/*--================================professional services section end here=======================--*/
+
+.professional_services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--primary-color);
+}
+
+.professional_services a {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.bg_pro_service {
+    background-image: url(images/bg_btm.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 160px 0;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+
+/*--================================professional services section end here=======================--*/
+
+
+/*--================================airport_shuttle services section start here=======================--*/
+
+.airport_shuttle {
+    padding: 160px 0;
+    margin-top: 70px;
+}
+
+.airport_shuttle h2 {
+    font-size: 55px;
+    color: #fff;
+}
+
+.airport_shuttle p {
+    font-size: 18px;
+    color: #fff;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.airport_shuttle .button {
+    display: inline-block;
+    margin: 4px 2px;
+    background-color: var(--primary-color);
+    font-size: 22px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.airport_shuttle .button:hover {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+}
+
+.airport_shuttle .search-container {
+    position: relative;
+    display: inline-block;
+    margin: 4px 2px;
+    height: 50px;
+    width: 50px;
+    vertical-align: bottom;
+}
+
+.airport_shuttle .mglass {
+    display: inline-block;
+    pointer-events: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    font-size: 30px;
+}
+
+.airport_shuttle .searchbutton {
+    position: absolute;
+    font-size: 22px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.airport_shuttle .search:focus+.searchbutton {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+}
+
+.airport_shuttle .search {
+    position: absolute;
+    left: 49px;
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 100%;
+    z-index: 10;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+}
+
+.airport_shuttle .search:focus {
+    width: 363px;
+    padding: 0 16px 0 0;
+}
+
+.airport_shuttle .expandright {
+    left: auto;
+    right: auto;
+}
+
+.airport_shuttle .expandright:focus {
+    padding: 0 0 0 16px;
+}
+
+
+/*--================================airport_shuttle services section end here=======================--*/
+
+
+/*--================================popular_place services section start here=======================--*/
+
+.popular_place {
+    padding-top: 60px;
+}
+
+.popular_place h2 {
+    font-size: 45px;
+    color: #262858;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.popular_place img {
+    width: 100%;
+    height: 350px;
+}
+
+.popular_place .card-text a {
+    color: var(--primary-color);
+    margin-top: 20px;
+    display: block;
+    font-size: 20px;
+    text-align: left;
+}
+
+.popular_place .card-title img {
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.popular_place a {
+    font-size: 20px;
+}
+
+.popular_btn a {
+    background: var(--primary-color);
+    width: 100%;
+}
+
+.popular_btn a:hover {
+    background: #F2C94C;
+}
+
+
+/*--================================popular_place services section end here=======================--*/
+
+
+/*--================================tour_place services section start here=======================--*/
+
+.tour_place {
+    padding-top: 60px;
+}
+
+.tour_place h2 {
+    font-size: 45px;
+    color: #262858;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.tour_place img {
+    margin-right: 20px;
+    width: 40px;
+    height: 30px;
+}
+
+.tour_place h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.tour_place a {
+    color: var(--primary-color);
+    margin-top: 16px;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+/*--================================tour_place services section end here=======================--*/
+
+
+/*--================================Drivers app services section start here=======================--*/
+
+.drivers_app {
+    background-image: linear-gradient(0, #fceabb 0%, #f8b500 95.31%);
+    padding: 5% 15%;
+    margin-top: 80px;
+}
+
+.drivers_app p {
+    text-align: left;
+    font-size: 18px;
+}
+
+.drivers_app h2 {
+    font-size: 45px;
+    text-align: left;
+    margin: 30px 0;
+}
+
+.drivers_app .apps img {
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.drivers_app .apps {
+    text-align: left;
+}
+
+.drivers_app .right_app img {
+    width: 80%;
+}
+
+
+/*--================================Drivers app services section end here=======================--*/
+
+
+/*--================================We Offer services section start here=======================--*/
+
+.we_offer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.we_offer h6 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.we_offer h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.we_offer h5 {
+    text-align: center;
+    color: #000;
+    font-size: 17px;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.we_offer .offer_payment {
+    background-color: #000;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.we_offer .safty {
+    background: var(--primary-color);
+}
+
+.we_offer .offer_payment img {
+    width: 40px;
+    margin-top: 20px;
+}
+
+.we_offer .pay-offer {
+    background: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.we_offer .pay-safty {
+    background-color: #000;
+}
+
+.we_offer .pay-offer i {
+    font-size: 25px;
+}
+
+.we_offer .pay-safty i {
+    color: #fff;
+}
+
+.we_offer .pay-text {
+    color: #fff;
+}
+
+.we_offer .safty-text {
+    color: #000;
+    text-align: left;
+}
+
+.we_offer .paymethod {
+    border-top: 1px solid lightgoldenrodyellow;
+}
+
+.we_offer .paymethod span i {
+    font-size: 35px;
+}
+
+.we_offer .paymethod span {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.we_offer .Digital {
+    background-color: #fceabb;
+}
+
+
+/*--================================We Offer services section end here=======================--*/
+
+
+/*--================================extra_service services section end here=======================--*/
+
+.extra_service {
+    background-image: url(images/bgc.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 120px 0;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.extra_service p {
+    text-align: center;
+}
+
+.extra_service h2 {
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.extra_service .extra span {
+    background: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.extra_service .extra span i {
+    font-size: 25px;
+    text-align: center;
+}
+
+.extra_service .extra {
+    text-align: center !important;
+    justify-content: center;
+}
+
+.extra_service .extra p {
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+
+/*--================================extra_service services section end here=======================--*/
+
+
+/*--================================car_services services section start here=======================--*/
+
+.car_services .card {
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 0;
+    border-radius: 20px;
+}
+
+.car_services span {
+    background: #000;
+    border-radius: 10px;
+    padding: 18px 18px;
+}
+
+.car_services {
+    text-align: center;
+}
+
+.car_services span i {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.car_services a i {
+    color: var(--primary-color);
+}
+
+.car_services a {
+    color: var(--primary-color);
+}
+
+.car_services .card-body h3 {
+    margin-top: 30px;
+}
+
+.car_services .card:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.car_services .card:hover span {
+    background: var(--primary-color);
+}
+
+.car_services .card:hover i {
+    color: #000;
+}
+
+
+/*--================================car_services services section end here=======================--*/
+
+
+/*--================================become_driver services section start here=======================--*/
+
+.become_driver {
+    background-image: url(images/bg3-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 160px;
+    padding-bottom: 180px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.become_driver h2 {
+    text-align: left;
+    font-size: 45px;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.become_driver a {
+    background: linear-gradient(0, #fceabb 0%, #f8b500 95.31%);
+    font-weight: 600;
+}
+
+
+/*--================================become_driver services section end here=======================--*/
+
+
+/*--================================adventurous services section start here=======================--*/
+
+.adventurous img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.adventurous a {
+    font-weight: 600;
+}
+
+.adventurous h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #262858;
+}
+
+.adventurous h2 span {
+    color: var(--primary-color);
+}
+
+
+/*--================================adventurous services section end here=======================--*/
+
+
+/*--================================choose_us services section end here=======================--*/
+
+.choose_us {
+    background-image: url(images/bg56.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.choose_us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #262858;
+    font-size: 45px;
+}
+
+.choose_us i {
+    font-size: 45px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.choose_us p {
+    text-align: center;
+}
+
+.choose_us h4 {
+    padding: 10px 0;
+}
+
+
+/*--================================choose_us services section end here=======================--*/
+
+
+/*--================================requirements services section start here=======================--*/
+
+.requirements img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.requirements {
+    background: #FAF3F0;
+}
+
+.requirements h2 span {
+    color: var(--primary-color);
+}
+
+.requirements h2 {
+    color: #262858;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.bgoverlay {
+    background-color: #FAF3F0;
+    padding-bottom: 40px;
+}
+
+.bgoverlay img {
+    width: 100%;
+}
+
+.requirement-circle i {
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.requirements p {
+    margin-left: 30px;
+}
+
+
+/*--================================requirements services section end here=======================--*/
+
+
+/*--================================blog_details services section start here=======================--*/
+
+.blog_details .blog_detail_img img {
+    border-radius: 20px;
+    width: 80%;
+    height: 450px;
+}
+
+.blog_details img {
+    border-radius: 20px;
+}
+
+.blog_details h2 {
+    text-align: left;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.blog_details h5 {
+    text-align: left;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.blog_details .blog_detail_text {
+    width: 80%;
+    margin: auto;
+}
+
+.blog_details hr {
+    margin-top: 40px;
+}
+
+.blog_details {
+    margin-top: 80px;
+}
+
+
+/*--================================blog_details services section end here=======================--*/
+
+
+/*--================================blog_banner services section start here=======================--*/
+
+.blog_banner .b_banner {
+    background: #FFE4D2;
+    border-radius: 20px;
+    padding: 80px 30px;
+    width: 80%;
+    margin: auto;
+}
+
+.blog_banner {
+    padding-top: 20px;
+}
+
+.blog_banner h2 {
+    text-align: left;
+}
+
+
+/*--================================blog_banner services section end here=======================--*/
+
+
+/*--================================more_blog services section start here=======================--*/
+
+.more_blog {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.more_blog h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.more_blog img {
+    max-width: 100%;
+    height: 250px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.more_blog .card {
+    border-radius: 20px;
+}
+
+.more_blog p {
+    text-align: left;
+}
+
+.more_blog h4 {
+    text-align: left;
+}
+
+.more_blog h6 {
+    text-align: right;
+    color: var(--primary-color);
+}
+
+
+/*--================================more_blog services section end here=======================--*/
+
+
+/*--================================affiliate_program services section start here=======================--*/
+
+.affiliate_program {
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.affiliate_program p {
+    font-size: 18px;
+}
+
+.affiliate_program h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #262858;
+    font-size: 45px;
+}
+
+.affiliate_program h2 span {
+    color: var(--primary-color);
+}
+
+.affiliate_program img {
+    width: 60%;
+    margin: auto;
+}
+
+.affiliate_program .aff_pro {
+    width: 80%;
+    margin: auto;
+}
+
+
+/*--================================affiliate_program services section end here=======================--*/
+
+
+/*--================================about_affiliate services section start here=======================--*/
+
+.about_affiliate {
+    padding: 40px 0;
+}
+
+.about_affiliate h3 {
+    text-align: left;
+    color: #262858;
+    margin-bottom: 20px;
+}
+
+.about_affiliate img {
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.about_affiliate p {
+    font-size: 18px;
+}
+
+
+/*--================================about_affiliate services section end here=======================--*/
+
+
+/*--================================affiliate_work services section start here=======================--*/
+
+.affiliate_work {
+    padding: 40px 0;
+}
+
+.affiliate_work h3 {
+    text-align: left;
+    color: #262858;
+    margin-bottom: 20px;
+}
+
+.affiliate_work img {
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.affiliate_work p {
+    font-size: 18px;
+}
+
+.affiliate_work .aff_pro {
+    width: 80%;
+    margin: auto;
+}
+
+
+/*--================================affiliate_work services section end here=======================--*/
+
+
+/*--================================why_choose services section start here=======================--*/
+
+.why_choose h2 {
+    text-align: centar;
+    margin-bottom: 40px;
+    color: #262858;
+    font-size: 45px;
+}
+
+.why_choose h2 span {
+    color: var(--primary-color);
+}
+
+.why_choose {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, rgba(254, 122, 31, 0) 0%, rgba(254, 122, 31, 0.1) 46.35%, #fceabb 88.54%, #fceabb 100%);
+}
+
+.why_choose .card {
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 0;
+    border-radius: 20px;
+}
+
+.why_choose .card-body {
+    text-align: left;
+}
+
+.why_choose .card-body span i {
+    color: var(--primary-color);
+    font-size: 35px;
+}
+
+.why_choose .card-body h3 {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.why_choose .card-body p {
+    text-align: left;
+}
+
+
+/*--================================why_choose services section end here=======================--*/
+
+
+/*--================================Interested services section start here=======================--*/
+
+.Interested {
+    background: #FFEBD8;
+    padding-bottom: 60px;
+}
+
+.Interested h2 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+Interested p {
+    font-size: 18px;
+}
+
+.Intoverlay {
+    background-color: #FFEBD8;
+    padding-bottom: 40px;
+}
+
+.Intoverlay img {
+    width: 100%;
+}
+
+
+/*--================================Interested services section end here=======================--*/
+
+
+/*--================================Transportation_Services services section start here=======================--*/
+
+.Transportation_Services {
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.Transportation_Services p {
+    font-size: 18px;
+}
+
+.Transportation_Services h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #262858;
+    font-size: 45px;
+}
+
+.Transportation_Services h2 span {
+    color: var(--primary-color);
+}
+
+.Transportation_Services img {
+    width: 60%;
+    margin: auto;
+}
+
+.Transportation_Services .buttoon a {
+    font-size: 20px;
+}
+
+
+/*--================================Transportation_Services services section end here=======================--*/
+
+
+/*--================================transportation services section end here=======================--*/
+
+.transportation {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.transportation img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.transportation p {
+    font-size: 18px;
+}
+
+.transportation h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #262858;
+    font-size: 35px;
+}
+
+.transportation .all_transportation {
+    background: #FFEBD8;
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+
+/*--================================transportation services section end here=======================--*/
+
+
+/*--================================choose_us services section start here=======================--*/
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+
+/* medium and up screens */
+
+@media (min-width: 768px) {
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
+.choose_us h2 {
+    text-align: center;
+    margin-bottom: 80px;
+    color: #262858;
+    font-size: 45px;
+}
+
+.choose_us h2 span {
+    color: var(--primary-color);
+}
+
+.choose_us h4 {
+    text-align: left;
+    color: var(--primary-color);
+    padding: 5px 10px;
+}
+
+.choose_us p {
+    text-align: left;
+    padding: 0 10px;
+}
+
+.choose_us .carousel-control-prev {
+    left: 90%;
+}
+
+.choose_us .carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: -55px !important;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    width: 4% !important;
+    height: 50px;
+    padding: 5px;
+    color: orangered;
+    text-align: center;
+    background: gray !important;
+    border: 0;
+    transition: opacity .15s ease;
+    display: block !important;
+}
+
+.choose_us .carousel-control-next {
+    right: 15px;
+}
+
+
+/*--================================choose_us services section end here=======================--*/
+
+
+/*--================================vehicle_details services section start here=======================--*/
+
+.vehicle_details {
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: left;
+}
+
+.vehicle_details h1 {
+    text-align: left;
+    color: var(--primary-color);
+    font-size: 50px;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+.vehicle_details p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+
+/*--================================vehicle_details services section end here=======================--*/
+
+
+/*--================================standard_sedan services section start here=======================--*/
+
+.standard_sedan h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.standard_sedan hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.standard_sedan p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.standard_sedan img {
+    width: 100%;
+    height: auto;
+}
+
+.standard_sedan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.standard_sedan h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.standard_sedan ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.standard_sedan ul li {
+    margin-top: 10px;
+}
+
+.standard_sedan .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================standard_sedan services section end here=======================--*/
+
+
+/*--================================ev_standard_sedan services section start here=======================--*/
+
+.ev_standard_sedan {
+    background: #FAF3F0;
+    padding-top: 40px;
+}
+
+.ev_standard_sedan h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.ev_standard_sedan hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.ev_standard_sedan p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.ev_standard_sedan img {
+    width: 100%;
+    height: auto;
+}
+
+.ev_standard_sedan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.ev_standard_sedan h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.ev_standard_sedan ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.ev_standard_sedan ul li {
+    margin-top: 10px;
+}
+
+.ev_standard_sedan .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================ev_standard_sedan services section end here=======================--*/
+
+
+/*--================================business_sedan services section start here=======================--*/
+
+.business_sedan {
+    padding-top: 40px;
+}
+
+.business_sedan h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.business_sedan hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.business_sedan p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.business_sedan img {
+    width: 100%;
+}
+
+.business_sedan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.business_sedan h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.business_sedan ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.business_sedan ul li {
+    margin-top: 10px;
+}
+
+.business_sedan .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================business_sedan services section end here=======================--*/
+
+
+/*--================================ev_business_sedan services section start here=======================--*/
+
+.ev_business_sedan {
+    background: #FAF3F0;
+    padding-top: 40px;
+}
+
+.ev_business_sedan h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.ev_business_sedan hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.ev_business_sedan p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.ev_business_sedan img {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.ev_business_sedan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.ev_business_sedan h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.ev_business_sedan ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.ev_business_sedan ul li {
+    margin-top: 10px;
+}
+
+.ev_business_sedan .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================ev_business_sedan services section end here=======================--*/
+
+
+/*--================================first_class_sedan services section start here=======================--*/
+
+.first_class_sedan {
+    padding-top: 40px;
+}
+
+.first_class_sedan h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.first_class_sedan hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.first_class_sedan p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.first_class_sedan img {
+    width: 100%;
+}
+
+.first_class_sedan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.first_class_sedan h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.first_class_sedan ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.first_class_sedan ul li {
+    margin-top: 10px;
+}
+
+.first_class_sedan .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================first_class_sedan services section end here=======================--*/
+
+
+/*--================================ev_first_class_sedan services section start here=======================--*/
+
+.ev_first_class_sedan {
+    padding-top: 40px;
+    background: #FAF3F0;
+}
+
+.ev_first_class_sedan h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.ev_first_class_sedan hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.ev_first_class_sedan p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.ev_first_class_sedan img {
+    width: 100%;
+}
+
+.ev_first_class_sedan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.ev_first_class_sedan h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.ev_first_class_sedan ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.ev_first_class_sedan ul li {
+    margin-top: 10px;
+}
+
+.ev_first_class_sedan .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================ev_first_class_sedan services section end here=======================--*/
+
+
+/*--================================super_VIP services section start here=======================--*/
+
+.super_VIP {
+    padding-top: 40px;
+}
+
+.super_VIP h2 {
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.super_VIP hr {
+    width: 40%;
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.super_VIP p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.super_VIP img {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.super_VIP ul {
+    list-style: none;
+    text-align: left;
+}
+
+.super_VIP h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.super_VIP ul li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.super_VIP ul li {
+    margin-top: 10px;
+}
+
+.super_VIP .buttonn {
+    text-align: center !important;
+}
+
+
+/*--================================super_VIP services section end here=======================--*/
+
+
+/*--================================need_more services section start here=======================--*/
+
+.need_more h2 {
+    text-align: left;
+    color: #262858;
+    text-transform: capitalize;
+    font-size: 48px;
+}
+
+.need_more h2 span {
+    color: var(--primary-color);
+}
+
+.need_more p {
+    font-size: 18px;
+}
+
+.need_more h4 {
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.need_more .bbb_viewed_item {
+    border-radius: 20px;
+}
+
+.need_more .bbb_viewed_content {
+    border-radius: 0 0 10px 10px;
+}
+
+.need_more .bbb_viewed_image img {
+    border-radius: 10px 10px 0 0;
+}
+
+
+/*--================================need_more services section end here=======================--*/
+
+
+/*--================================services_details services section start here=======================--*/
+
+.services_details .services_details_img {
+    background: #FAF3F0;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+.services_details .services_details_img img {
+    width: 100%;
+}
+
+.services_details_Intoverlay {
+    background-color: var(--primary-color);
+}
+
+.services_details_Intoverlay h2 {
+    text-transform: capitalize;
+    color: #fff;
+}
+
+
+/*--================================services_details services section end here=======================--*/
+
+
+/*--================================Our_Advantages services section start here=======================--*/
+
+.Our_Advantages h4 {
+    text-align: left;
+    color: #262858;
+}
+
+
+/*--================================Our_Advantages services section end here=======================--*/
+
+
+/*--================================Our_Advantages_cards services section start here=======================--*/
+
+.Our_Advantages_cards {
+    background: #fff;
+}
+
+.Our_Advantages_cards .card {
+    background: linear-gradient(180deg, rgba(254, 122, 31, 0) 0%, rgba(254, 122, 31, 0.1) 46.35%, #fceabb 88.54%, #fceabb 100%);
+}
+
+
+/*--================================Our_Advantages_cards services section end here=======================--*/
+
+
+/*--================================our_fleet services section start here=======================--*/
+
+.our_fleet {
+    background-color: #FAF3F0;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.our_fleet i {
+    font-size: 45px;
+    color: var(--primary-color);
+    padding: 20px 0;
+}
+
+.our_fleet h3 {
+    font-size: 35px;
+    color: #262858;
+    padding: 20px 0;
+}
+
+.our_fleet .row {
+    width: 80%;
+    margin: auto;
+}
+
+
+/*--================================our_fleet services section end here=======================--*/
+
+
+/*--================================best_brand services section start here=======================--*/
+
+.best_brand {
+    margin-top: 80px;
+    background: #fff;
+}
+
+.best_brand .row {
+    background: #FFEBD8;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    border-radius: 20px;
+}
+
+.best_brand i {
+    font-size: 80px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 6px 15px;
+    z-index: 1;
+    line-height: 25px;
+}
+
+
+/*--================================best_brand services section end here=======================--*/
+
+
+/*--================================our_fleets services section start here=======================--*/
+
+.our_fleets {
+    background: #fff;
+    padding-bottom: 0;
+}
+
+.our_fleets p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.our_fleets img {
+    width: 100%;
+    height: auto;
+}
+
+.our_fleets ul {
+    list-style: none;
+    text-align: left;
+}
+
+.our_fleets h4 {
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.our_fleets ul li i {
+    font-size: 20px !important;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.our_fleets ul li {
+    margin-top: 10px;
+}
+
+.our_fleets .buttonn a {
+    width: 100%;
+}
+
+
+/*--================================our_fleets services section end here=======================--*/
+
+
+/*--================================drivers_training services section start here=======================--*/
+
+.drivers_training {
+    background-image: url(images/mainBg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    margin-top: 80px;
+}
+
+.drivers_training h2 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.drivers_training p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    width: 50%;
+    margin: auto;
+}
+
+.drivers_training .buttonn a {
+    font-size: 20px;
+}
+
+.drivers_training .textctn {
+    text-align: center;
+    justify-content: center;
+}
+
+.welcome_training ol li a {
+    color: #000;
+    margin-left: 20px;
+}
+
+.welcome_training ol li {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.welcome_training li:hover {
+    color: var(--primary-color);
+}
+
+.welcome_training li a:focus {
+    color: var(--primary-color);
+}
+
+.welcome_training h2 {
+    color: var(--primary-color);
+    font-size: 45px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.welcome_training h3 {
+    color: #262858;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.welcome_training p {
+    color: #000;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+}
+
+
+/*--================================drivers_training services section end here=======================--*/
+
+
+/*--================================signup_form services section start here=======================--*/
+
+.signup_form {
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+
+/*--================================signup_form services section end here=======================--*/
+
+
+/*--================================signin_form services section start here=======================--*/
+
+.sign_in {
+    margin-top: 80px;
+}
+
+
+/*--================================signin_form services section end here=======================--*/
+
+
+/*--================================footer_part section start here=======================--*/
+
+.footer_part {
+    background-color: #F6F6F7;
+    padding-top: 70px;
+}
+
+.footer_part .social i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.b_footer p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer_part h5 {
+    font-weight: 700;
+}
+
+.footer_part a {
+    color: #262858;
+}
+
+.footer_part img {
+    width: 150px;
+}
+
+
+/*--================================footer_part section end here=======================--*/

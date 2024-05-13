@@ -1,0 +1,1908 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/registration:
+    post:
+      summary: ''
+      operationId: postApiRegistration
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Successfull Registration'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Registration successfully'
+                  data:
+                    name: Abdul
+                    username: lotif
+                    email: lotif@mail.com
+                    user_type: 2
+                    is_admin: 2
+                    approved: 1
+                    updated_at: '2023-12-02T05:05:55.000000Z'
+                    created_at: '2023-12-02T05:05:55.000000Z'
+                    id: 1
+                    token: 1|b4QdpNgFD7g6hSBTa4MoHBLXtjrKKtOW98Lev2d25754cfa6
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Registration successfully'
+                  data:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        example: Abdul
+                      username:
+                        type: string
+                        example: lotif
+                      email:
+                        type: string
+                        example: lotif@mail.com
+                      user_type:
+                        type: integer
+                        example: 2
+                      is_admin:
+                        type: integer
+                        example: 2
+                      approved:
+                        type: integer
+                        example: 1
+                      updated_at:
+                        type: string
+                        example: '2023-12-02T05:05:55.000000Z'
+                      created_at:
+                        type: string
+                        example: '2023-12-02T05:05:55.000000Z'
+                      id:
+                        type: integer
+                        example: 1
+                      token:
+                        type: string
+                        example: 1|b4QdpNgFD7g6hSBTa4MoHBLXtjrKKtOW98Lev2d25754cfa6
+        417:
+          description: 'Registration Failed'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error Occurred.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error Occurred.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: integer
+                  description: ''
+                  example: 2
+                name:
+                  type: string
+                  description: ''
+                  example: 'Abdul Lotif'
+                phone:
+                  type: string
+                  description: ''
+                  example: '+88 01234567890'
+                address:
+                  type: string
+                  description: ''
+                  example: 'Dhaka, Bangladesh.'
+                email:
+                  type: string
+                  description: ''
+                  example: lotif@mail.com
+                username:
+                  type: string
+                  description: ''
+                  example: lotif
+                password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+                confirm-password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+              required:
+                - user_type
+                - name
+                - phone
+                - address
+                - email
+                - username
+                - password
+                - confirm-password
+      security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Successful Login'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Login successfully'
+                  data:
+                    id: 16
+                    name: Abdul
+                    email: lotif@mail.com
+                    email_verified_at: null
+                    is_admin: 2
+                    approved: 1
+                    photo: null
+                    twitter: null
+                    facebook: null
+                    instagram: null
+                    linkedin: null
+                    created_at: '2023-12-02T05:05:55.000000Z'
+                    updated_at: '2023-12-02T05:05:55.000000Z'
+                    username: lotif
+                    user_type: 2
+                    token: 1|hjv1wlu6K1w16jt8yaUxG70srKeUXDsgwQ7ho2q349dbf1e3
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Login successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 16
+                      name:
+                        type: string
+                        example: Abdul
+                      email:
+                        type: string
+                        example: lotif@mail.com
+                      email_verified_at:
+                        type: string
+                        example: null
+                      is_admin:
+                        type: integer
+                        example: 2
+                      approved:
+                        type: integer
+                        example: 1
+                      photo:
+                        type: string
+                        example: null
+                      twitter:
+                        type: string
+                        example: null
+                      facebook:
+                        type: string
+                        example: null
+                      instagram:
+                        type: string
+                        example: null
+                      linkedin:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2023-12-02T05:05:55.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-02T05:05:55.000000Z'
+                      username:
+                        type: string
+                        example: lotif
+                      user_type:
+                        type: integer
+                        example: 2
+                      token:
+                        type: string
+                        example: 1|hjv1wlu6K1w16jt8yaUxG70srKeUXDsgwQ7ho2q349dbf1e3
+        417:
+          description: 'Failed Login'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Invalid credentials.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Invalid credentials.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: ''
+                  example: error
+                password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+                email:
+                  type: string
+                  description: ''
+                  example: johndeo
+              required:
+                - username
+                - password
+                - email
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Successful Login'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Logout successfully'
+                  data: null
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Logout successfully'
+                  data:
+                    type: string
+                    example: null
+        417:
+          description: 'Failed Logout'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: Unauthenticated.
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/services:
+    get:
+      summary: ''
+      operationId: getApiServices
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Request Successfull'
+                  data:
+                    -
+                      id: 1
+                      name: 'Airport Shuttle Service'
+                      status: 1
+                      auto_approved: 0
+                      description: ''
+                      service_type_id: null
+                      created_at: '2023-12-02T05:05:42.000000Z'
+                      updated_at: '2023-12-02T05:05:42.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Request Successfull'
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 'Airport Shuttle Service'
+                        status: 1
+                        auto_approved: 0
+                        description: ''
+                        service_type_id: null
+                        created_at: '2023-12-02T05:05:42.000000Z'
+                        updated_at: '2023-12-02T05:05:42.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 'Airport Shuttle Service'
+                        status:
+                          type: integer
+                          example: 1
+                        auto_approved:
+                          type: integer
+                          example: 0
+                        description:
+                          type: string
+                          example: ''
+                        service_type_id:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: '2023-12-02T05:05:42.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-12-02T05:05:42.000000Z'
+      tags:
+        - Endpoints
+  /api/settings:
+    get:
+      summary: ''
+      operationId: getApiSettings
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Request Successfull'
+                  data:
+                    id: 1
+                    business_name: 'Your Business Name'
+                    business_address: 'your business address'
+                    business_number: '00000000000'
+                    business_email: null
+                    time_zone: null
+                    logo: null
+                    favicon: null
+                    meta_title: null
+                    meta_description: null
+                    meta_image: null
+                    mail_host: null
+                    mail_port: null
+                    mail_username: null
+                    mail_password: null
+                    mail_from_name: null
+                    mail_from_address: null
+                    mail_encryption: null
+                    mail_status: null
+                    stripe_payment: null
+                    stripe_key: null
+                    stripe_secret: null
+                    created_at: '2023-12-02T05:05:42.000000Z'
+                    updated_at: '2023-12-02T05:05:42.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Request Successfull'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      business_name:
+                        type: string
+                        example: 'Your Business Name'
+                      business_address:
+                        type: string
+                        example: 'your business address'
+                      business_number:
+                        type: string
+                        example: '00000000000'
+                      business_email:
+                        type: string
+                        example: null
+                      time_zone:
+                        type: string
+                        example: null
+                      logo:
+                        type: string
+                        example: null
+                      favicon:
+                        type: string
+                        example: null
+                      meta_title:
+                        type: string
+                        example: null
+                      meta_description:
+                        type: string
+                        example: null
+                      meta_image:
+                        type: string
+                        example: null
+                      mail_host:
+                        type: string
+                        example: null
+                      mail_port:
+                        type: string
+                        example: null
+                      mail_username:
+                        type: string
+                        example: null
+                      mail_password:
+                        type: string
+                        example: null
+                      mail_from_name:
+                        type: string
+                        example: null
+                      mail_from_address:
+                        type: string
+                        example: null
+                      mail_encryption:
+                        type: string
+                        example: null
+                      mail_status:
+                        type: string
+                        example: null
+                      stripe_payment:
+                        type: string
+                        example: null
+                      stripe_key:
+                        type: string
+                        example: null
+                      stripe_secret:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2023-12-02T05:05:42.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-02T05:05:42.000000Z'
+      tags:
+        - Endpoints
+  /api/tickets:
+    get:
+      summary: ''
+      operationId: getApiTickets
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successful'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Request Successfull'
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        user_id: 16
+                        name: Abdul
+                        email: lotif@mail.com
+                        ticket: '640788'
+                        subject: 'Booking Problem'
+                        status: 0
+                        priority: 3
+                        last_reply: '2023-12-02 10:15:18'
+                        created_at: '2023-12-02T10:15:18.000000Z'
+                        updated_at: '2023-12-02T10:15:18.000000Z'
+                    first_page_url: 'http://127.0.0.1:8000/api/tickets?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://127.0.0.1:8000/api/tickets?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/tickets?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://127.0.0.1:8000/api/tickets'
+                    per_page: 20
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Request Successfull'
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            user_id: 16
+                            name: Abdul
+                            email: lotif@mail.com
+                            ticket: '640788'
+                            subject: 'Booking Problem'
+                            status: 0
+                            priority: 3
+                            last_reply: '2023-12-02 10:15:18'
+                            created_at: '2023-12-02T10:15:18.000000Z'
+                            updated_at: '2023-12-02T10:15:18.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            user_id:
+                              type: integer
+                              example: 16
+                            name:
+                              type: string
+                              example: Abdul
+                            email:
+                              type: string
+                              example: lotif@mail.com
+                            ticket:
+                              type: string
+                              example: '640788'
+                            subject:
+                              type: string
+                              example: 'Booking Problem'
+                            status:
+                              type: integer
+                              example: 0
+                            priority:
+                              type: integer
+                              example: 3
+                            last_reply:
+                              type: string
+                              example: '2023-12-02 10:15:18'
+                            created_at:
+                              type: string
+                              example: '2023-12-02T10:15:18.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2023-12-02T10:15:18.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/tickets?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/tickets?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/tickets?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/tickets'
+                      per_page:
+                        type: integer
+                        example: 20
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+      tags:
+        - Endpoints
+  /api/transport-type:
+    get:
+      summary: ''
+      operationId: getApiTransportType
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Request Successfull'
+                  data:
+                    -
+                      id: 1
+                      name: 'Airport Shuttle Service'
+                      status: 1
+                      auto_approved: 0
+                      description: ''
+                      service_type_id: null
+                      created_at: '2023-12-02T05:05:42.000000Z'
+                      updated_at: '2023-12-02T05:05:42.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Request Successfull'
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 'Airport Shuttle Service'
+                        status: 1
+                        auto_approved: 0
+                        description: ''
+                        service_type_id: null
+                        created_at: '2023-12-02T05:05:42.000000Z'
+                        updated_at: '2023-12-02T05:05:42.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 'Airport Shuttle Service'
+                        status:
+                          type: integer
+                          example: 1
+                        auto_approved:
+                          type: integer
+                          example: 0
+                        description:
+                          type: string
+                          example: ''
+                        service_type_id:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: '2023-12-02T05:05:42.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-12-02T05:05:42.000000Z'
+      tags:
+        - Endpoints
+  /api/user-password-update:
+    post:
+      summary: ''
+      operationId: postApiUserPasswordUpdate
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Successful Password Update'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Password changed successfully'
+                  data: null
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Password changed successfully'
+                  data:
+                    type: string
+                    example: null
+        417:
+          description: 'Failed Password Update'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Incorrect old password.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Incorrect old password.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+                confirm-password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+                old_password:
+                  type: string
+                  description: ''
+                  example: '123456'
+              required:
+                - password
+                - confirm-password
+                - old_password
+      security: []
+  /api/user-profile-update:
+    post:
+      summary: ''
+      operationId: postApiUserProfileUpdate
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Profile updated successfully'
+                  data:
+                    id: 16
+                    name: 'Abdul Hamid Khan Vashani'
+                    email: vahsani@gmail.com
+                    email_verified_at: null
+                    is_admin: 2
+                    approved: 1
+                    photo: null
+                    twitter: optional
+                    facebook: optional
+                    instagram: optional
+                    linkedin: optional
+                    created_at: '2023-12-02T05:05:55.000000Z'
+                    updated_at: '2023-12-03T06:35:55.000000Z'
+                    username: lotif
+                    user_type: 2
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Profile updated successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 16
+                      name:
+                        type: string
+                        example: 'Abdul Hamid Khan Vashani'
+                      email:
+                        type: string
+                        example: vahsani@gmail.com
+                      email_verified_at:
+                        type: string
+                        example: null
+                      is_admin:
+                        type: integer
+                        example: 2
+                      approved:
+                        type: integer
+                        example: 1
+                      photo:
+                        type: string
+                        example: null
+                      twitter:
+                        type: string
+                        example: optional
+                      facebook:
+                        type: string
+                        example: optional
+                      instagram:
+                        type: string
+                        example: optional
+                      linkedin:
+                        type: string
+                        example: optional
+                      created_at:
+                        type: string
+                        example: '2023-12-02T05:05:55.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-03T06:35:55.000000Z'
+                      username:
+                        type: string
+                        example: lotif
+                      user_type:
+                        type: integer
+                        example: 2
+        417:
+          description: 'Request Failed'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error Occurred.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error Occurred.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: lotif@mail.com
+                name:
+                  type: string
+                  description: ''
+                  example: 'John Doe'
+                phone:
+                  type: string
+                  description: ''
+                  example: '+88 01234567890'
+                address:
+                  type: string
+                  description: ''
+                  example: 'Dhaka, Bangladesh.'
+                license_number:
+                  type: string
+                  description: 'optional Only for driver'
+                  example: '35342534'
+                nid_number:
+                  type: string
+                  description: optional
+                  example: '35342534'
+                preferred_areas:
+                  type: string
+                  description: 'optional Only for driver'
+                  example: '35342534'
+                passport_number:
+                  type: string
+                  description: optional
+                  example: '35342534'
+                passport_photo:
+                  type: string
+                  format: binary
+                  description: 'optional Example:'
+                twitter:
+                  type: string
+                  description: optional
+                  example: 'https://example.com'
+                facebook:
+                  type: string
+                  description: optional
+                  example: 'https://example.com'
+                instagram:
+                  type: string
+                  description: optional
+                  example: 'https://example.com'
+                linkedin:
+                  type: string
+                  description: optional
+                  example: 'https://example.com'
+                license_photo:
+                  type: string
+                  format: binary
+                  description: 'optional Only for driver. Example:'
+                nid_photo:
+                  type: string
+                  format: binary
+                  description: 'optional Example:'
+                documents:
+                  type: string
+                  format: binary
+                  description: 'optional Only for driver. Example:'
+                photo:
+                  type: string
+                  format: binary
+                  description: 'optional Only for driver. Example:'
+              required:
+                - email
+                - name
+                - phone
+                - address
+      security: []
+  /api/customer/create-booking:
+    post:
+      summary: ''
+      operationId: postApiCustomerCreateBooking
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Data created successfully'
+                  data:
+                    start_location: bogura
+                    end_location: dhaka
+                    service_id: '1'
+                    driver_id: '1'
+                    pickup_time: '12:30:00'
+                    from_date: '2023-12-01'
+                    to_date: '2023-12-01'
+                    payment_method: cash
+                    total_km: '100'
+                    final_total: 5000
+                    customer_id: '1'
+                    status: 0
+                    order_id: 'INV -20231204043028'
+                    created_by: '1'
+                    updated_at: '2023-12-04T04:30:28.000000Z'
+                    created_at: '2023-12-04T04:30:28.000000Z'
+                    id: 1
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Data created successfully'
+                  data:
+                    type: object
+                    properties:
+                      start_location:
+                        type: string
+                        example: bogura
+                      end_location:
+                        type: string
+                        example: dhaka
+                      service_id:
+                        type: string
+                        example: '1'
+                      driver_id:
+                        type: string
+                        example: '1'
+                      pickup_time:
+                        type: string
+                        example: '12:30:00'
+                      from_date:
+                        type: string
+                        example: '2023-12-01'
+                      to_date:
+                        type: string
+                        example: '2023-12-01'
+                      payment_method:
+                        type: string
+                        example: cash
+                      total_km:
+                        type: string
+                        example: '100'
+                      final_total:
+                        type: integer
+                        example: 5000
+                      customer_id:
+                        type: string
+                        example: '1'
+                      status:
+                        type: integer
+                        example: 0
+                      order_id:
+                        type: string
+                        example: 'INV -20231204043028'
+                      created_by:
+                        type: string
+                        example: '1'
+                      updated_at:
+                        type: string
+                        example: '2023-12-04T04:30:28.000000Z'
+                      created_at:
+                        type: string
+                        example: '2023-12-04T04:30:28.000000Z'
+                      id:
+                        type: integer
+                        example: 1
+        417:
+          description: 'Request Failed'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error Occurred.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error Occurred.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_location:
+                  type: string
+                  description: ''
+                  example: 'New York'
+                end_location:
+                  type: string
+                  description: ''
+                  example: Chicago
+                service_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                driver_id:
+                  type: integer
+                  description: ''
+                  example: 2
+                customer_id:
+                  type: integer
+                  description: ''
+                  example: 2
+                pickup_time:
+                  type: time
+                  description: ''
+                  example: '12:30:33'
+                from_date:
+                  type: date
+                  description: ''
+                  example: '2023-12-01'
+                to_date:
+                  type: date
+                  description: ''
+                  example: '2023-12-02'
+                payment_method:
+                  type: string
+                  description: ''
+                  example: 'Bank Account'
+                total_km:
+                  type: string
+                  description: ''
+                  example: '450.50 Km'
+                base_fare:
+                  type: string
+                  description: ''
+                  example: '30.00'
+                final_total:
+                  type: string
+                  description: ''
+                  example: '13500.00'
+              required:
+                - start_location
+                - end_location
+                - service_id
+                - driver_id
+                - customer_id
+                - pickup_time
+                - from_date
+                - to_date
+                - payment_method
+                - total_km
+                - base_fare
+                - final_total
+  /api/customer/payment-list:
+    get:
+      summary: ''
+      operationId: getApiCustomerPaymentList
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n      \"status\": true,\n      \"message\": \"Data retrived successfully\",\n      \"data\": [\n          {\n              \"id\": 4,\n              \"booking_id\": 1,\n              \"total_amount\": \"5580.00\",\n              \"discount_amount\": \"0.00\",\n              \"paid_amount\": \"5580.00\",\n              \"payment_method\": \"card\",\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n              \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n          }\n      ]\n  }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/customer/all-bookings:
+    get:
+      summary: ''
+      operationId: getApiCustomerAllBookings
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/customer/completed-trip:
+    get:
+      summary: ''
+      operationId: getApiCustomerCompletedTrip
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n  \"status\": true,\n  \"message\": \"Data retrived successfully\",\n  \"data\": [\n      {\n          \"id\": 1,\n          \"customer_id\": 3,\n          \"driver_id\": 6,\n          \"service_id\": 1,\n          \"pickup_time\": \"02:00\",\n          \"start_location\": \"Bogura\",\n          \"end_location\": \"Dhaka\",\n          \"from_date\": \"2023-12-03\",\n          \"to_date\": \"2023-12-03\",\n          \"base_fare\": \"30.00\",\n          \"total_km\": \"186.96\",\n          \"coupon_code\": null,\n          \"coupon_amount\": null,\n          \"discount\": null,\n          \"tax\": null,\n          \"final_total\": \"5580\",\n          \"note\": null,\n          \"payment_method\": \"Credit Debit  Card\",\n          \"created_by\": \"3\",\n          \"is_round_trip\": null,\n          \"transportation_mode\": null,\n          \"passenger\": \"4\",\n          \"order_id\": \"INV -20231203100006\",\n          \"status\": 2,\n          \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"customer\": {\n              \"id\": 3,\n              \"name\": \"Sven69\",\n              \"email\": \"fakedata90875@gmail.com\",\n              \"phone\": \"78987\",\n              \"address\": \"8786 Altenwerth Trace\",\n              \"profile_photo\": null,\n              \"nid_number\": null,\n              \"passport_number\": null,\n              \"passport_photo\": null,\n              \"user_id\": 16,\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n              \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n          },\n          \"driver\": {\n              \"id\": 6,\n              \"name\": \"Donnie\",\n              \"phone\": \"1933374304\",\n              \"address\": null,\n              \"license_number\": null,\n              \"user_id\": 9,\n              \"service_id\": 1,\n              \"license_photo\": null,\n              \"nid_photo\": null,\n              \"passport_photo\": null,\n              \"documents\": null,\n              \"preferred_areas\": null,\n              \"status\": 0,\n              \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n              \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n          },\n          \"customer_review\": [],\n          \"payment\": [\n              {\n                  \"id\": 4,\n                  \"booking_id\": 1,\n                  \"total_amount\": \"5580.00\",\n                  \"discount_amount\": \"0.00\",\n                  \"paid_amount\": \"5580.00\",\n                  \"payment_method\": \"card\",\n                  \"status\": 1,\n                  \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n              }\n          ],\n          \"driver_review\": [],\n          \"service\": {\n              \"id\": 1,\n              \"name\": \"Airport Shuttle Service\",\n              \"status\": 1,\n              \"auto_approved\": 1,\n              \"description\": null,\n              \"service_type_id\": null,\n              \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n              \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n          }\n      }\n  ]\n}\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/customer/pending-trip:
+    get:
+      summary: ''
+      operationId: getApiCustomerPendingTrip
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n  \"status\": true,\n  \"message\": \"Data retrived successfully\",\n  \"data\": [\n      {\n          \"id\": 1,\n          \"customer_id\": 3,\n          \"driver_id\": 6,\n          \"service_id\": 1,\n          \"pickup_time\": \"02:00\",\n          \"start_location\": \"Bogura\",\n          \"end_location\": \"Dhaka\",\n          \"from_date\": \"2023-12-03\",\n          \"to_date\": \"2023-12-03\",\n          \"base_fare\": \"30.00\",\n          \"total_km\": \"186.96\",\n          \"coupon_code\": null,\n          \"coupon_amount\": null,\n          \"discount\": null,\n          \"tax\": null,\n          \"final_total\": \"5580\",\n          \"note\": null,\n          \"payment_method\": \"Credit Debit  Card\",\n          \"created_by\": \"3\",\n          \"is_round_trip\": null,\n          \"transportation_mode\": null,\n          \"passenger\": \"4\",\n          \"order_id\": \"INV -20231203100006\",\n          \"status\": 2,\n          \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"customer\": {\n              \"id\": 3,\n              \"name\": \"Sven69\",\n              \"email\": \"fakedata90875@gmail.com\",\n              \"phone\": \"78987\",\n              \"address\": \"8786 Altenwerth Trace\",\n              \"profile_photo\": null,\n              \"nid_number\": null,\n              \"passport_number\": null,\n              \"passport_photo\": null,\n              \"user_id\": 16,\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n              \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n          },\n          \"driver\": {\n              \"id\": 6,\n              \"name\": \"Donnie\",\n              \"phone\": \"1933374304\",\n              \"address\": null,\n              \"license_number\": null,\n              \"user_id\": 9,\n              \"service_id\": 1,\n              \"license_photo\": null,\n              \"nid_photo\": null,\n              \"passport_photo\": null,\n              \"documents\": null,\n              \"preferred_areas\": null,\n              \"status\": 0,\n              \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n              \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n          },\n          \"customer_review\": [],\n          \"payment\": [\n              {\n                  \"id\": 4,\n                  \"booking_id\": 1,\n                  \"total_amount\": \"5580.00\",\n                  \"discount_amount\": \"0.00\",\n                  \"paid_amount\": \"5580.00\",\n                  \"payment_method\": \"card\",\n                  \"status\": 1,\n                  \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n              }\n          ],\n          \"driver_review\": [],\n          \"service\": {\n              \"id\": 1,\n              \"name\": \"Airport Shuttle Service\",\n              \"status\": 1,\n              \"auto_approved\": 1,\n              \"description\": null,\n              \"service_type_id\": null,\n              \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n              \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n          }\n      }\n  ]\n}\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/customer/cancelled-trip:
+    get:
+      summary: ''
+      operationId: getApiCustomerCancelledTrip
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n  \"status\": true,\n  \"message\": \"Data retrived successfully\",\n  \"data\": [\n      {\n          \"id\": 1,\n          \"customer_id\": 3,\n          \"driver_id\": 6,\n          \"service_id\": 1,\n          \"pickup_time\": \"02:00\",\n          \"start_location\": \"Bogura\",\n          \"end_location\": \"Dhaka\",\n          \"from_date\": \"2023-12-03\",\n          \"to_date\": \"2023-12-03\",\n          \"base_fare\": \"30.00\",\n          \"total_km\": \"186.96\",\n          \"coupon_code\": null,\n          \"coupon_amount\": null,\n          \"discount\": null,\n          \"tax\": null,\n          \"final_total\": \"5580\",\n          \"note\": null,\n          \"payment_method\": \"Credit Debit  Card\",\n          \"created_by\": \"3\",\n          \"is_round_trip\": null,\n          \"transportation_mode\": null,\n          \"passenger\": \"4\",\n          \"order_id\": \"INV -20231203100006\",\n          \"status\": 2,\n          \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n          \"customer\": {\n              \"id\": 3,\n              \"name\": \"Sven69\",\n              \"email\": \"fakedata90875@gmail.com\",\n              \"phone\": \"78987\",\n              \"address\": \"8786 Altenwerth Trace\",\n              \"profile_photo\": null,\n              \"nid_number\": null,\n              \"passport_number\": null,\n              \"passport_photo\": null,\n              \"user_id\": 16,\n              \"status\": 1,\n              \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n              \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n          },\n          \"driver\": {\n              \"id\": 6,\n              \"name\": \"Donnie\",\n              \"phone\": \"1933374304\",\n              \"address\": null,\n              \"license_number\": null,\n              \"user_id\": 9,\n              \"service_id\": 1,\n              \"license_photo\": null,\n              \"nid_photo\": null,\n              \"passport_photo\": null,\n              \"documents\": null,\n              \"preferred_areas\": null,\n              \"status\": 0,\n              \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n              \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n          },\n          \"customer_review\": [],\n          \"payment\": [\n              {\n                  \"id\": 4,\n                  \"booking_id\": 1,\n                  \"total_amount\": \"5580.00\",\n                  \"discount_amount\": \"0.00\",\n                  \"paid_amount\": \"5580.00\",\n                  \"payment_method\": \"card\",\n                  \"status\": 1,\n                  \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n              }\n          ],\n          \"driver_review\": [],\n          \"service\": {\n              \"id\": 1,\n              \"name\": \"Airport Shuttle Service\",\n              \"status\": 1,\n              \"auto_approved\": 1,\n              \"description\": null,\n              \"service_type_id\": null,\n              \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n              \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n          }\n      }\n  ]\n}\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/customer/user-profile:
+    get:
+      summary: ''
+      operationId: getApiCustomerUserProfile
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Data retrive successfully'
+                  data:
+                    id: 3
+                    name: Sven69
+                    email: fakedata90875@gmail.com
+                    phone: '78987'
+                    address: '8786 Altenwerth Trace'
+                    profile_photo: null
+                    nid_number: null
+                    passport_number: null
+                    passport_photo: null
+                    user_id: 16
+                    status: 1
+                    created_at: '2023-12-03T09:55:00.000000Z'
+                    updated_at: '2023-12-03T09:55:00.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Data retrive successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 3
+                      name:
+                        type: string
+                        example: Sven69
+                      email:
+                        type: string
+                        example: fakedata90875@gmail.com
+                      phone:
+                        type: string
+                        example: '78987'
+                      address:
+                        type: string
+                        example: '8786 Altenwerth Trace'
+                      profile_photo:
+                        type: string
+                        example: null
+                      nid_number:
+                        type: string
+                        example: null
+                      passport_number:
+                        type: string
+                        example: null
+                      passport_photo:
+                        type: string
+                        example: null
+                      user_id:
+                        type: integer
+                        example: 16
+                      status:
+                        type: integer
+                        example: 1
+                      created_at:
+                        type: string
+                        example: '2023-12-03T09:55:00.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-03T09:55:00.000000Z'
+      tags:
+        - Endpoints
+  /api/tickets/create:
+    post:
+      summary: ''
+      operationId: postApiTicketsCreate
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successful'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Ticket opened successfully.'
+                  data: null
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Ticket opened successfully.'
+                  data:
+                    type: string
+                    example: null
+        417:
+          description: 'Failed Login'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error occured.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error occured.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                subject:
+                  type: string
+                  description: ''
+                  example: 'Booking Problem'
+                priority:
+                  type: integer
+                  description: ''
+                  example: 1
+                message:
+                  type: string
+                  description: ''
+                  example: 'I have a problem with booking a taxi.'
+                attachments:
+                  type: array
+                  description: 'nullable Example:'
+                  example:
+                    - sit
+                  items:
+                    type: string
+              required:
+                - subject
+                - priority
+                - message
+      security: []
+  '/api/tickets/ticket-message-reply/{ticket_id}':
+    post:
+      summary: ''
+      operationId: postApiTicketsTicketMessageReplyTicket_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successful'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Message Sent.'
+                  data: null
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Message Sent.'
+                  data:
+                    type: string
+                    example: null
+        417:
+          description: 'Request Failed'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error occured.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error occured.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: ''
+                  example: 'Booking Problem message reply'
+                attachments:
+                  type: array
+                  description: optional
+                  example:
+                    - sint
+                  items:
+                    type: files
+              required:
+                - message
+      security: []
+    parameters:
+      -
+        in: path
+        name: ticket_id
+        description: ''
+        example: '1'
+        required: true
+        schema:
+          type: string
+  '/api/tickets/ticket-close/{ticket_id}':
+    post:
+      summary: ''
+      operationId: postApiTicketsTicketCloseTicket_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successful'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Ticket Closed successfully'
+                  data:
+                    id: 1
+                    user_id: 16
+                    name: Abdul
+                    email: lotif@mail.com
+                    ticket: '640788'
+                    subject: 'Booking Problem'
+                    status: 3
+                    priority: 3
+                    last_reply: '2023-12-03 07:07:49'
+                    created_at: '2023-12-02T10:15:18.000000Z'
+                    updated_at: '2023-12-03T07:16:36.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Ticket Closed successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      user_id:
+                        type: integer
+                        example: 16
+                      name:
+                        type: string
+                        example: Abdul
+                      email:
+                        type: string
+                        example: lotif@mail.com
+                      ticket:
+                        type: string
+                        example: '640788'
+                      subject:
+                        type: string
+                        example: 'Booking Problem'
+                      status:
+                        type: integer
+                        example: 3
+                      priority:
+                        type: integer
+                        example: 3
+                      last_reply:
+                        type: string
+                        example: '2023-12-03 07:07:49'
+                      created_at:
+                        type: string
+                        example: '2023-12-02T10:15:18.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-03T07:16:36.000000Z'
+        417:
+          description: 'Request Failed'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error occured.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error occured.'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: ticket_id
+        description: ''
+        example: '1'
+        required: true
+        schema:
+          type: string
+  /api/driver/all-booking-list-view:
+    get:
+      summary: ''
+      operationId: getApiDriverAllBookingListView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/driver/completed-trip:
+    get:
+      summary: ''
+      operationId: getApiDriverCompletedTrip
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/driver/pending-trip:
+    get:
+      summary: ''
+      operationId: getApiDriverPendingTrip
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/driver/cancelled-trip:
+    get:
+      summary: ''
+      operationId: getApiDriverCancelledTrip
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n          \"status\": true,\n          \"message\": \"Data retrived successfully\",\n          \"data\": [\n              {\n                  \"id\": 1,\n                  \"customer_id\": 3,\n                  \"driver_id\": 6,\n                  \"service_id\": 1,\n                  \"pickup_time\": \"02:00\",\n                  \"start_location\": \"Bogura\",\n                  \"end_location\": \"Dhaka\",\n                  \"from_date\": \"2023-12-03\",\n                  \"to_date\": \"2023-12-03\",\n                  \"base_fare\": \"30.00\",\n                  \"total_km\": \"186.96\",\n                  \"coupon_code\": null,\n                  \"coupon_amount\": null,\n                  \"discount\": null,\n                  \"tax\": null,\n                  \"final_total\": \"5580\",\n                  \"note\": null,\n                  \"payment_method\": \"Credit Debit  Card\",\n                  \"created_by\": \"3\",\n                  \"is_round_trip\": null,\n                  \"transportation_mode\": null,\n                  \"passenger\": \"4\",\n                  \"order_id\": \"INV -20231203100006\",\n                  \"status\": 0,\n                  \"created_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"updated_at\": \"2023-12-03T10:00:06.000000Z\",\n                  \"customer\": {\n                      \"id\": 3,\n                      \"name\": \"Sven69\",\n                      \"email\": \"fakedata90875@gmail.com\",\n                      \"phone\": \"78987\",\n                      \"address\": \"8786 Altenwerth Trace\",\n                      \"profile_photo\": null,\n                      \"nid_number\": null,\n                      \"passport_number\": null,\n                      \"passport_photo\": null,\n                      \"user_id\": 16,\n                      \"status\": 1,\n                      \"created_at\": \"2023-12-03T09:55:00.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:55:00.000000Z\"\n                  },\n                  \"driver\": {\n                      \"id\": 6,\n                      \"name\": \"Donnie\",\n                      \"phone\": \"1933374304\",\n                      \"address\": null,\n                      \"license_number\": null,\n                      \"user_id\": 9,\n                      \"service_id\": 1,\n                      \"license_photo\": null,\n                      \"nid_photo\": null,\n                      \"passport_photo\": null,\n                      \"documents\": null,\n                      \"preferred_areas\": null,\n                      \"status\": 0,\n                      \"created_at\": \"2023-12-03T03:22:47.000000Z\",\n                      \"updated_at\": \"2023-12-03T03:22:47.000000Z\"\n                  },\n                  \"customer_review\": [],\n                  \"payment\": [\n                      {\n                          \"id\": 4,\n                          \"booking_id\": 1,\n                          \"total_amount\": \"5580.00\",\n                          \"discount_amount\": \"0.00\",\n                          \"paid_amount\": \"5580.00\",\n                          \"payment_method\": \"card\",\n                          \"status\": 1,\n                          \"created_at\": \"2023-12-03T10:06:02.000000Z\",\n                          \"updated_at\": \"2023-12-03T10:06:34.000000Z\"\n                      }\n                  ],\n                  \"driver_review\": [],\n                  \"service\": {\n                      \"id\": 1,\n                      \"name\": \"Airport Shuttle Service\",\n                      \"status\": 1,\n                      \"auto_approved\": 1,\n                      \"description\": null,\n                      \"service_type_id\": null,\n                      \"created_at\": \"2023-12-03T03:22:44.000000Z\",\n                      \"updated_at\": \"2023-12-03T09:43:59.000000Z\"\n                  }\n              }\n          ]\n      }\n\n @response 417 scenario=\"Request Failed\"{\n\"status\": false,\n\"message\": \"Error Occurred.\"\n}"
+      tags:
+        - Endpoints
+  /api/driver/user-profile:
+    get:
+      summary: ''
+      operationId: getApiDriverUserProfile
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Data retrive successfully'
+                  data:
+                    id: 3
+                    name: Sven69
+                    email: fakedata90875@gmail.com
+                    phone: '78987'
+                    address: '8786 Altenwerth Trace'
+                    profile_photo: null
+                    nid_number: null
+                    passport_number: null
+                    passport_photo: null
+                    user_id: 16
+                    status: 1
+                    created_at: '2023-12-03T09:55:00.000000Z'
+                    updated_at: '2023-12-03T09:55:00.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Data retrive successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 3
+                      name:
+                        type: string
+                        example: Sven69
+                      email:
+                        type: string
+                        example: fakedata90875@gmail.com
+                      phone:
+                        type: string
+                        example: '78987'
+                      address:
+                        type: string
+                        example: '8786 Altenwerth Trace'
+                      profile_photo:
+                        type: string
+                        example: null
+                      nid_number:
+                        type: string
+                        example: null
+                      passport_number:
+                        type: string
+                        example: null
+                      passport_photo:
+                        type: string
+                        example: null
+                      user_id:
+                        type: integer
+                        example: 16
+                      status:
+                        type: integer
+                        example: 1
+                      created_at:
+                        type: string
+                        example: '2023-12-03T09:55:00.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-03T09:55:00.000000Z'
+      tags:
+        - Endpoints
+  /api/driver/update-veicle-information:
+    post:
+      summary: ''
+      operationId: postApiDriverUpdateVeicleInformation
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Request Successfull'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Information updated successfully'
+                  data: null
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Information updated successfully'
+                  data:
+                    type: string
+                    example: null
+        417:
+          description: 'Request Failed'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Error Occurred.'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error Occurred.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                driver_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                transport_type_id:
+                  type: integer
+                  description: ''
+                  example: 5
+                name:
+                  type: string
+                  description: ''
+                  example: 'Audi 8'
+                register_no:
+                  type: string
+                  description: ''
+                  example: BD96587
+                engine_no:
+                  type: string
+                  description: ''
+                  example: GH8965874
+                license_number:
+                  type: string
+                  description: 'Only for driver'
+                  example: '35342534'
+                chasis_no:
+                  type: string
+                  description: ''
+                  example: '35342534'
+                model_no:
+                  type: string
+                  description: 'Only for driver'
+                  example: '35342534'
+                seat_capacity:
+                  type: string
+                  description: ''
+                  example: '1,2,3'
+                car_planumber:
+                  type: string
+                  description: ''
+                  example: '1236'
+                operating_license:
+                  type: string
+                  description: ''
+                  example: '585269'
+                car_luggage:
+                  type: integer
+                  description: ''
+                  example: 5
+                car_photos:
+                  type: string
+                  description: optional
+                  example: "['image_1', 'image_2']"
+              required:
+                - driver_id
+                - transport_type_id
+                - name
+                - register_no
+                - engine_no
+                - license_number
+                - chasis_no
+                - model_no
+                - seat_capacity
+                - car_planumber
+                - operating_license
+                - car_luggage
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''

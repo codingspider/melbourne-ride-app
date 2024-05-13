@@ -1,0 +1,54 @@
+
+@media only screen and (max-width: 1199px){
+	.travel img{
+		width: 100%;
+	}
+	.our_service_res img{
+		width: 100%;
+	}
+	.the_latest_news img{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 991px){
+	.blog .fsimg img{
+		width: 100%;
+	}
+	.blog .fsimgg img{
+		width: 100%;
+	}
+	.footer_partt img{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 767px){
+	.topservice{
+		margin-bottom: 30px;
+	}
+	.the_latest_news .luxbtn{
+		margin-bottom: 20px;
+	}
+	.footer_partt img{
+		width: 150px;
+	}
+	.Our_Advantages .buttonn{
+		margin-bottom: 20px;
+	}
+	.affiliate_program_res .buttonn{
+		margin-bottom: 20px;
+	}
+	.Interested_res .buttonn{
+		margin-bottom: 20px;
+	}
+	.Interested_res h2{
+		text-align: left;
+	}
+	.form_support_res h6{
+		margin-top: 30px;
+	}
+}
+@media only screen and (max-width: 319px){
+	.footer_part .app img{
+		width: 100%;
+	}
+}
