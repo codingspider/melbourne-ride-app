@@ -25,9 +25,9 @@ $contact = \App\Models\ContactPage::latest()->first();
                         <div class="widget widget-categories">
                             <h4 class="widget-title">USEFUL LINKS</h4>
                             <ul>
-                                <li><a href="{{ url('terms-and-condition') }}">Terms and Conditions</a></li>
-                                <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
-                                <li><a href="{{ url('refund-policy') }}">Refund Policy</a></li>
+                                <li><a href="{{ getStaticPageURL('terms') }}">Terms and Conditions</a></li>
+                                <li><a href="{{ getStaticPageURL('privacy') }}">Privacy Policy</a></li>
+                                <li><a href="{{ getStaticPageURL('refund') }}">Refund Policy</a></li>
                                 <li><a href="{{ route('home.blog') }}">Blog</a></li>
                             </ul>
                         </div>
@@ -39,7 +39,7 @@ $contact = \App\Models\ContactPage::latest()->first();
                             <ul>
                                 <li><a href="{{ url('about-us') }}">Private Tour Packages</a></li>
                                 <li><a href="{{ url('about-us') }}">Wedding Packages</a></li>
-                                <li><a href="{{ url('about-us') }}">About Us</a></li>
+                                <li><a href="{{ getStaticPageURL('about_us') }}">About Us</a></li>
                                 <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
                             </ul>
                         </div>

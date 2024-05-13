@@ -302,6 +302,15 @@
                     
                     @can('page-list')
                         <li>
+                            <a href="{{ route('static-page.index') }}"
+                                class="{{ request()->routeIs('static-page.index') ? 'nav-link' : '' }}">
+                                <i class="bi bi-circle"></i><span>Static Page Content </span>
+                            </a>
+                        </li>
+                    @endcan
+                    
+                    @can('page-list')
+                        <li>
                             <a href="{{ route('contact-page-data') }}"
                                 class="{{ request()->routeIs('contact-page-data') ? 'nav-link' : '' }}">
                                 <i class="bi bi-circle"></i><span>Contact Page Content </span>

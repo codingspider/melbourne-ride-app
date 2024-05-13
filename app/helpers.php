@@ -10,6 +10,7 @@ use App\Models\Amenitie;
 use App\Models\Customer;
 use ClickSend\Api\SMSApi;
 use App\Models\CreditCard;
+use App\Models\StaticPage;
 use Illuminate\Support\Str;
 use ClickSend\Configuration;
 use ClickSend\Model\SmsMessage;
@@ -465,4 +466,20 @@ function showAmount($amount, $decimal = 2, $separate = true, $exceptZeros = fals
         }
     }
     return $printAmount;
+}
+
+
+function getStaticPage(){
+    $data = [
+        'about_us',
+        'terms',
+        'privacy',
+        'refund',
+    ];
+    return $data;
+}
+
+function getStaticPageURL($page){
+    $data = StaticPage::where('page', $page)->latest()->first();
+    return $data->slug ?? '#';
 }

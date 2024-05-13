@@ -40,6 +40,7 @@ use App\Http\Controllers\Admin\HomePageController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Customer\StripeController;
 use App\Http\Controllers\Customer\TicketController;
+use App\Http\Controllers\Admin\StaticPageController;
 use App\Http\Controllers\Customer\BookingController;
 use App\Http\Controllers\Driver\DashboardController;
 use App\Http\Controllers\Admin\ExaminationController;
@@ -152,6 +153,7 @@ Route::group(['middleware' => 'auth', 'is_admin'], function () {
     Route::get('get-vehicles', [VehicleController::class, 'getVehicles']);
     Route::resource('whychoose', WhyChooseController::class);
     Route::resource('faq', FaqController::class);
+    Route::resource('static-page', StaticPageController::class);
 
     Route::get('/chart-data', [AuthController::class, 'getChartData']);
     Route::get('/pie-chart-data', [AuthController::class, 'getPieChartData']);

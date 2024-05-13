@@ -172,72 +172,89 @@
 
 <section class="page-section">
     <div class="container">
-        <h2 class="section-title"><span>{{ $data->section_title ?? '' }}</span></h2>
-        <p>{!! $data->section_description ?? '' !!}</p>
+        <div class="text-center">
+            <h1 class="section-title"><span>{{ $data->section_title ?? '' }}</span></h1>
+            <h2>Experience The Best Chauffeur Services in Melbourne</h2>
+            <p>{!! $data->section_description !!} </p>
+        </div>
+
         <hr class="page-divider small">
         <div class="row">
+
+            <h2 class="section-title"><span>Chauffeur Services We Provide</span></h2>
             @if($data->section_block_1_title && $data->section_block_1_description)
             <div class="col-md-4">
                 <h2 class="block-title">{{ $data->section_block_1_title ?? '' }}</h2>
                 <p>{!! $data->section_block_1_description ?? '' !!}</p>
+                <a href="{{ $data->setion_one_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_2_title && $data->section_block_2_description)
             <div class="col-md-4">
                 <h2 class="block-title">{{ $data->section_block_2_title ?? '' }}</h2>
                 <p>{!! $data->section_block_2_description ?? '' !!}</p>
-
+                <a href="{{ $data->setion_two_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
+
             @if($data->section_block_3_title && $data->section_block_3_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_3_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_3_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_3_title ?? '' }}</h2>
+                <p>{!! $data->section_block_3_description ?? '' !!}</p>
+                <a href="{{ $data->setion_three_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_4_title && $data->section_block_4_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_4_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_4_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_4_title ?? '' }}</h2>
+                <p>{!! $data->section_block_4_description ?? '' !!}</p>
+                <a href="{{ $data->setion_four_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_5_title && $data->section_block_5_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_5_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_5_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_5_title ?? '' }}</h2>
+                <p>{!! $data->section_block_5_description ?? '' !!}</p>
+                <a href="{{ $data->setion_five_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_6_title && $data->section_block_6_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_6_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_6_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_6_title ?? '' }}</h2>
+                <p>{!! $data->section_block_6_description ?? '' !!}</p>
+                <a href="{{ $data->setion_six_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_7_title && $data->section_block_7_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_7_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_7_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_7_title ?? '' }}</h2>
+                <p>{!! $data->section_block_7_description ?? '' !!}</p>
+                <a href="{{ $data->setion_seven_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_8_title && $data->section_block_8_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_8_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_8_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_8_title ?? '' }}</h2>
+                <p>{!! $data->section_block_8_description ?? '' !!}</p>
+                <a href="{{ $data->setion_eight_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
             @if($data->section_block_9_title && $data->section_block_9_description)
             <div class="col-md-4">
-            <h2 class="block-title">{{ $data->section_block_9_title ?? '' }}</h2>
-                        <p>{!! $data->section_block_9_description ?? '' !!}</p>
+                <h2 class="block-title">{{ $data->section_block_9_title ?? '' }}</h2>
+                <p>{!! $data->section_block_9_description ?? '' !!}</p>
+                <a href="{{ $data->setion_nine_url }}" style="color: #444444">Read More... </a>
             </div>
             @endif
         </div>
 
         <div class="row">
             <div class="col-md-6">
+                <a href="{{ route('book-now') }}" class="btn btn-warning" style="color: #444444">Book Now </a>
                 <p>{{ $data->stats_one_title}}</p>
             </div>
             <div class="col-md-6">
+                <a href="{{ route('get-qoute.create') }}" class="btn btn-warning" style="color: #444444">Get Qoute</a>
                 <p>{{ $data->stats_two_title}}</p>
             </div>
         </div>
@@ -246,9 +263,11 @@
 
 @include('theme.home.vehicles')
 <section class="page-section image">
-    <div class="container text-center">
-        <h1 style="color: #000; font-weight:bold; font-size: 30px; margin-top: 20px; margin-bottom: 20px">Why Choose
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <h1 style="color: #000; font-weight:bold; font-size: 30px; margin-top: 20px; margin-bottom: 20px">Why Choose
             Melbourne Limolink Chauffeur Services</h1>
+        </div>
         <div class="row">
             @foreach($whychooses as $why)
             <div class="col-md-4">
@@ -269,9 +288,11 @@
 
         <div class="row">
             <div class="col-md-6">
+                <a href="{{ route('book-now') }}" class="btn btn-warning" style="color: #444444">Book Now </a>
                 <p>{{ $data->stats_three_title}}</p>
             </div>
             <div class="col-md-6">
+                <a href="{{ route('get-qoute.create') }}" class="btn btn-warning" style="color: #444444">Get Qoute</a>
                 <p>{{ $data->stats_four_title}}</p>
             </div>
         </div>
